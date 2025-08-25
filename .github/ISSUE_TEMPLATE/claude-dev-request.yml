@@ -1,0 +1,110 @@
+name: 🤖 Claude Code Development Request
+description: Claude Codeによる自動開発・PR作成を依頼
+title: "[Claude Dev] "
+labels: ["claude-dev", "auto-pr"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## 🤖 Claude Code 自動開発リクエスト
+        
+        このテンプレートを使用すると、Claude Codeが自動的に：
+        1. 機能の実装
+        2. ブランチの作成  
+        3. プルリクエストの作成
+        を行います。
+
+  - type: textarea
+    id: requirements
+    attributes:
+      label: 📋 実装要件
+      description: 実装してほしい機能や修正内容を詳しく記載してください
+      placeholder: |
+        例：
+        - ユーザー認証機能の追加
+        - パフォーマンス問題の修正
+        - 新しいAPIエンドポイントの実装
+        - バグの修正
+    validations:
+      required: true
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: 🎯 優先度
+      description: この実装の優先度を選択してください
+      options:
+        - 🔴 高（緊急）
+        - 🟡 中（通常）
+        - 🟢 低（時間に余裕あり）
+      default: 1
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: implementation_scope
+    attributes:
+      label: 📦 実装範囲
+      description: 含めてほしい作業内容を選択してください
+      options:
+        - label: 基本実装
+          required: true
+        - label: テストコードの作成
+        - label: ドキュメント更新
+        - label: パフォーマンス最適化
+        - label: セキュリティ考慮
+        - label: エラーハンドリング
+
+  - type: textarea
+    id: technical_notes
+    attributes:
+      label: 🔧 技術的な注意事項
+      description: 実装時に注意してほしい技術的な要件があれば記載
+      placeholder: |
+        例：
+        - 既存のXXXライブラリを使用
+        - TypeScriptの型安全性を重視  
+        - パフォーマンスを最優先
+        - 特定のデザインパターンに従う
+
+  - type: textarea
+    id: acceptance_criteria
+    attributes:
+      label: ✅ 受け入れ基準
+      description: 完了の判定基準を明記してください
+      placeholder: |
+        例：
+        - [ ] 新機能が正常に動作する
+        - [ ] 既存テストがすべて通る
+        - [ ] 新しいテストが80%以上のカバレッジ
+        - [ ] CI/CDパイプラインが通る
+        - [ ] パフォーマンスが改善される
+
+  - type: dropdown
+    id: auto_pr_mode
+    attributes:
+      label: 🚀 自動PR作成
+      description: 実装完了時の自動PR作成を有効にしますか？
+      options:
+        - ✅ 有効（実装完了時に自動でPR作成）
+        - ❌ 無効（手動でPR作成）
+      default: 0
+    validations:
+      required: true
+
+  - type: markdown
+    attributes:
+      value: |
+        ## 🎯 使用方法
+        
+        1. このIssueを作成
+        2. Issueに `@claude-dev` でメンション
+        3. Claude Codeが自動的に作業開始
+        4. 完了時に自動でPRが作成されます（有効時）
+        
+        ## ⚡ 高速開発コマンド
+        
+        より具体的な指示が必要な場合：
+        - `@claude --auto-pr` - 自動PR作成モードで実行
+        - `@claude --test` - テスト重視モードで実行  
+        - `@claude --secure` - セキュリティ重視モードで実行
