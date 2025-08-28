@@ -1,0 +1,808 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Pattern 6: Raksul Kamii Design System - AI Overview LP Theme</title>
+    <meta name="description" content="Pattern 6: Raksul Kamiiデザインシステム - AI検索対策プラグインのランディングページ">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="assets/css/custom.css">
+    <style>
+        /* Raksul Kamii Design System inspired styles */
+        :root {
+            /* Raksul Brand Colors */
+            --raksul-primary-50: #FDF2F8;
+            --raksul-primary-100: #FCE7F3;
+            --raksul-primary-200: #FBCFE8;
+            --raksul-primary-300: #F9A8D4;
+            --raksul-primary-400: #F472B6;
+            --raksul-primary-500: #EC4899;
+            --raksul-primary-600: #DB2777;
+            --raksul-primary-700: #BE185D;
+            --raksul-primary-800: #9D174D;
+            --raksul-primary-900: #831843;
+            
+            --raksul-secondary-50: #F0F9FF;
+            --raksul-secondary-100: #E0F2FE;
+            --raksul-secondary-200: #BAE6FD;
+            --raksul-secondary-300: #7DD3FC;
+            --raksul-secondary-400: #38BDF8;
+            --raksul-secondary-500: #0EA5E9;
+            --raksul-secondary-600: #0284C7;
+            --raksul-secondary-700: #0369A1;
+            --raksul-secondary-800: #075985;
+            --raksul-secondary-900: #0C4A6E;
+            
+            --raksul-accent-50: #FFFBEB;
+            --raksul-accent-100: #FEF3C7;
+            --raksul-accent-200: #FDE68A;
+            --raksul-accent-300: #FCD34D;
+            --raksul-accent-400: #FBBF24;
+            --raksul-accent-500: #F59E0B;
+            --raksul-accent-600: #D97706;
+            --raksul-accent-700: #B45309;
+            --raksul-accent-800: #92400E;
+            --raksul-accent-900: #78350F;
+            
+            --raksul-gray-50: #FAFAF9;
+            --raksul-gray-100: #F5F5F4;
+            --raksul-gray-200: #E7E5E4;
+            --raksul-gray-300: #D6D3D1;
+            --raksul-gray-400: #A8A29E;
+            --raksul-gray-500: #78716C;
+            --raksul-gray-600: #57534E;
+            --raksul-gray-700: #44403C;
+            --raksul-gray-800: #292524;
+            --raksul-gray-900: #1C1917;
+            
+            /* Typography Scale */
+            --raksul-font-family: "Inter", "Noto Sans JP", "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
+            --raksul-font-mono: "JetBrains Mono", "Fira Code", monospace;
+            
+            --raksul-text-xs: 0.75rem;    /* 12px */
+            --raksul-text-sm: 0.875rem;   /* 14px */
+            --raksul-text-base: 1rem;     /* 16px */
+            --raksul-text-lg: 1.125rem;   /* 18px */
+            --raksul-text-xl: 1.25rem;    /* 20px */
+            --raksul-text-2xl: 1.5rem;    /* 24px */
+            --raksul-text-3xl: 1.875rem;  /* 30px */
+            --raksul-text-4xl: 2.25rem;   /* 36px */
+            --raksul-text-5xl: 3rem;      /* 48px */
+            --raksul-text-6xl: 3.75rem;   /* 60px */
+            
+            /* Spacing System (4px base) */
+            --raksul-space-1: 0.25rem;    /* 4px */
+            --raksul-space-2: 0.5rem;     /* 8px */
+            --raksul-space-3: 0.75rem;    /* 12px */
+            --raksul-space-4: 1rem;       /* 16px */
+            --raksul-space-6: 1.5rem;     /* 24px */
+            --raksul-space-8: 2rem;       /* 32px */
+            --raksul-space-12: 3rem;      /* 48px */
+            --raksul-space-16: 4rem;      /* 64px */
+            --raksul-space-20: 5rem;      /* 80px */
+            --raksul-space-24: 6rem;      /* 96px */
+            --raksul-space-32: 8rem;      /* 128px */
+            
+            /* Border Radius */
+            --raksul-radius-none: 0;
+            --raksul-radius-sm: 0.125rem;  /* 2px */
+            --raksul-radius-md: 0.375rem;  /* 6px */
+            --raksul-radius-lg: 0.5rem;    /* 8px */
+            --raksul-radius-xl: 0.75rem;   /* 12px */
+            --raksul-radius-2xl: 1rem;     /* 16px */
+            --raksul-radius-full: 9999px;
+            
+            /* Shadows */
+            --raksul-shadow-xs: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+            --raksul-shadow-sm: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1);
+            --raksul-shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+            --raksul-shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+            --raksul-shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+        }
+        
+        .pattern-indicator {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            background: var(--raksul-primary-600);
+            color: white;
+            padding: var(--raksul-space-2) var(--raksul-space-3);
+            border-radius: var(--raksul-radius-lg);
+            font-size: var(--raksul-text-xs);
+            font-weight: 600;
+            z-index: 9999;
+            box-shadow: var(--raksul-shadow-lg);
+        }
+        
+        * {
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: var(--raksul-font-family);
+            line-height: 1.6;
+            color: var(--raksul-gray-900);
+            margin: 0;
+            background: var(--raksul-gray-50);
+            font-size: var(--raksul-text-base);
+        }
+        
+        /* Header */
+        .raksul-header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--raksul-gray-200);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: var(--raksul-shadow-sm);
+        }
+        
+        .raksul-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: var(--raksul-space-4) var(--raksul-space-8);
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        .raksul-logo {
+            font-size: var(--raksul-text-2xl);
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--raksul-primary-600) 0%, var(--raksul-secondary-600) 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-decoration: none;
+        }
+        
+        .raksul-nav-menu {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            gap: var(--raksul-space-8);
+        }
+        
+        .raksul-nav-menu a {
+            text-decoration: none;
+            color: var(--raksul-gray-700);
+            font-weight: 500;
+            padding: var(--raksul-space-2) var(--raksul-space-4);
+            border-radius: var(--raksul-radius-lg);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+        }
+        
+        .raksul-nav-menu a::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: 0;
+            height: 2px;
+            background: var(--raksul-primary-600);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            transform: translateX(-50%);
+        }
+        
+        .raksul-nav-menu a:hover {
+            color: var(--raksul-primary-600);
+            background: var(--raksul-primary-50);
+        }
+        
+        .raksul-nav-menu a:hover::before {
+            width: 100%;
+        }
+        
+        /* Container */
+        .raksul-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 var(--raksul-space-8);
+        }
+        
+        .raksul-container-narrow {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 var(--raksul-space-8);
+        }
+        
+        /* Hero Section */
+        .raksul-hero {
+            background: linear-gradient(135deg, var(--raksul-primary-50) 0%, var(--raksul-secondary-50) 50%, white 100%);
+            padding: var(--raksul-space-20) 0 var(--raksul-space-16) 0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .raksul-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 50%;
+            height: 100%;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="10" cy="10" r="1" fill="%23EC4899" opacity="0.1"/><circle cx="30" cy="30" r="1" fill="%230EA5E9" opacity="0.1"/><circle cx="70" cy="20" r="1" fill="%23F59E0B" opacity="0.1"/><circle cx="90" cy="80" r="1" fill="%23EC4899" opacity="0.1"/></svg>');
+            animation: float 20s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+        
+        .raksul-hero-content {
+            text-align: center;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .raksul-hero-title {
+            font-size: var(--raksul-text-5xl);
+            font-weight: 900;
+            color: var(--raksul-gray-900);
+            margin-bottom: var(--raksul-space-6);
+            line-height: 1.1;
+            letter-spacing: -0.025em;
+        }
+        
+        .raksul-hero-title span {
+            background: linear-gradient(135deg, var(--raksul-primary-600) 0%, var(--raksul-secondary-600) 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .raksul-hero-subtitle {
+            font-size: var(--raksul-text-xl);
+            color: var(--raksul-gray-600);
+            margin-bottom: var(--raksul-space-8);
+            line-height: 1.5;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .raksul-hero-cta {
+            display: flex;
+            justify-content: center;
+            gap: var(--raksul-space-4);
+            flex-wrap: wrap;
+        }
+        
+        /* Buttons */
+        .raksul-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: var(--raksul-space-3) var(--raksul-space-6);
+            font-size: var(--raksul-text-base);
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: var(--raksul-radius-xl);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            border: none;
+            cursor: pointer;
+            gap: var(--raksul-space-2);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .raksul-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+            transition: left 0.5s;
+        }
+        
+        .raksul-btn:hover::before {
+            left: 100%;
+        }
+        
+        .raksul-btn-primary {
+            background: linear-gradient(135deg, var(--raksul-primary-600) 0%, var(--raksul-primary-700) 100%);
+            color: white;
+            box-shadow: var(--raksul-shadow-lg);
+        }
+        
+        .raksul-btn-primary:hover {
+            background: linear-gradient(135deg, var(--raksul-primary-700) 0%, var(--raksul-primary-800) 100%);
+            box-shadow: var(--raksul-shadow-xl);
+            transform: translateY(-2px);
+        }
+        
+        .raksul-btn-secondary {
+            background: white;
+            color: var(--raksul-primary-600);
+            border: 2px solid var(--raksul-primary-600);
+            box-shadow: var(--raksul-shadow-sm);
+        }
+        
+        .raksul-btn-secondary:hover {
+            background: var(--raksul-primary-50);
+            transform: translateY(-2px);
+            box-shadow: var(--raksul-shadow-md);
+        }
+        
+        /* Sections */
+        .raksul-section {
+            padding: var(--raksul-space-16) 0;
+        }
+        
+        .raksul-section-gray {
+            background: linear-gradient(135deg, var(--raksul-gray-50) 0%, var(--raksul-gray-100) 100%);
+        }
+        
+        .raksul-section-title {
+            font-size: var(--raksul-text-4xl);
+            font-weight: 800;
+            color: var(--raksul-gray-900);
+            text-align: center;
+            margin-bottom: var(--raksul-space-6);
+            line-height: 1.2;
+            letter-spacing: -0.025em;
+        }
+        
+        .raksul-section-subtitle {
+            font-size: var(--raksul-text-lg);
+            color: var(--raksul-gray-600);
+            text-align: center;
+            margin-bottom: var(--raksul-space-12);
+            line-height: 1.6;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        /* Feature Grid */
+        .raksul-features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: var(--raksul-space-8);
+            margin-top: var(--raksul-space-12);
+        }
+        
+        .raksul-feature-card {
+            background: white;
+            border-radius: var(--raksul-radius-2xl);
+            padding: var(--raksul-space-8);
+            box-shadow: var(--raksul-shadow-md);
+            border: 1px solid var(--raksul-gray-200);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .raksul-feature-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(135deg, var(--raksul-primary-600) 0%, var(--raksul-secondary-600) 100%);
+        }
+        
+        .raksul-feature-card:hover {
+            box-shadow: var(--raksul-shadow-xl);
+            transform: translateY(-4px);
+        }
+        
+        .raksul-feature-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--raksul-primary-100) 0%, var(--raksul-secondary-100) 100%);
+            border-radius: var(--raksul-radius-xl);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: var(--raksul-space-6);
+            color: var(--raksul-primary-600);
+        }
+        
+        .raksul-feature-title {
+            font-size: var(--raksul-text-xl);
+            font-weight: 700;
+            color: var(--raksul-gray-900);
+            margin-bottom: var(--raksul-space-3);
+        }
+        
+        .raksul-feature-description {
+            color: var(--raksul-gray-600);
+            line-height: 1.7;
+        }
+        
+        /* Stats */
+        .raksul-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: var(--raksul-space-6);
+            margin: var(--raksul-space-12) 0;
+        }
+        
+        .raksul-stat {
+            text-align: center;
+            padding: var(--raksul-space-8);
+            background: white;
+            border-radius: var(--raksul-radius-xl);
+            box-shadow: var(--raksul-shadow-sm);
+            border: 1px solid var(--raksul-gray-200);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .raksul-stat:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--raksul-shadow-md);
+        }
+        
+        .raksul-stat-number {
+            font-size: var(--raksul-text-4xl);
+            font-weight: 900;
+            background: linear-gradient(135deg, var(--raksul-primary-600) 0%, var(--raksul-secondary-600) 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            display: block;
+            margin-bottom: var(--raksul-space-2);
+        }
+        
+        .raksul-stat-label {
+            color: var(--raksul-gray-600);
+            font-size: var(--raksul-text-sm);
+            font-weight: 500;
+        }
+        
+        /* CTA Section */
+        .raksul-cta {
+            background: linear-gradient(135deg, var(--raksul-primary-600) 0%, var(--raksul-secondary-600) 100%);
+            color: white;
+            text-align: center;
+            padding: var(--raksul-space-16) var(--raksul-space-8);
+            border-radius: var(--raksul-radius-2xl);
+            margin: var(--raksul-space-12) 0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .raksul-cta::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="20" cy="20" r="2" fill="white" opacity="0.1"/><circle cx="80" cy="40" r="1" fill="white" opacity="0.1"/><circle cx="40" cy="80" r="1.5" fill="white" opacity="0.1"/></svg>');
+            animation: float 15s ease-in-out infinite;
+        }
+        
+        .raksul-cta-content {
+            position: relative;
+            z-index: 2;
+        }
+        
+        .raksul-cta-title {
+            font-size: var(--raksul-text-4xl);
+            font-weight: 800;
+            margin-bottom: var(--raksul-space-4);
+            line-height: 1.2;
+        }
+        
+        .raksul-cta-subtitle {
+            font-size: var(--raksul-text-lg);
+            opacity: 0.9;
+            margin-bottom: var(--raksul-space-8);
+            line-height: 1.6;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        /* Footer */
+        .raksul-footer {
+            background: var(--raksul-gray-900);
+            color: var(--raksul-gray-300);
+            padding: var(--raksul-space-16) 0 var(--raksul-space-8) 0;
+        }
+        
+        .raksul-footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: var(--raksul-space-8);
+            margin-bottom: var(--raksul-space-12);
+        }
+        
+        .raksul-footer-section h4 {
+            color: white;
+            font-weight: 700;
+            margin-bottom: var(--raksul-space-4);
+        }
+        
+        .raksul-footer-section ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .raksul-footer-section li {
+            margin-bottom: var(--raksul-space-2);
+        }
+        
+        .raksul-footer-section a {
+            color: var(--raksul-gray-400);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .raksul-footer-section a:hover {
+            color: var(--raksul-primary-400);
+        }
+        
+        .raksul-footer-bottom {
+            border-top: 1px solid var(--raksul-gray-800);
+            padding-top: var(--raksul-space-8);
+            text-align: center;
+            color: var(--raksul-gray-500);
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .raksul-nav {
+                padding: var(--raksul-space-4);
+            }
+            
+            .raksul-nav-menu {
+                display: none;
+            }
+            
+            .raksul-hero-title {
+                font-size: var(--raksul-text-4xl);
+            }
+            
+            .raksul-hero-cta {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .raksul-features {
+                grid-template-columns: 1fr;
+            }
+            
+            .raksul-stats {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .raksul-container,
+            .raksul-container-narrow {
+                padding: 0 var(--raksul-space-4);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="pattern-indicator">Pattern 6: Raksul</div>
+    
+    <header class="raksul-header">
+        <nav class="raksul-nav">
+            <a href="#" class="raksul-logo">AI Overview LP Theme</a>
+            <ul class="raksul-nav-menu">
+                <li><a href="#home">ホーム</a></li>
+                <li><a href="#features">機能</a></li>
+                <li><a href="#benefits">ベネフィット</a></li>
+                <li><a href="#demo">デモ</a></li>
+                <li><a href="#contact">お問い合わせ</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <!-- Hero Section -->
+        <section class="raksul-hero" id="home">
+            <div class="raksul-container">
+                <div class="raksul-hero-content">
+                    <h1 class="raksul-hero-title">Google検索の新時代<br><span>AIサマリ</span>で勝ち残る</h1>
+                    <p class="raksul-hero-subtitle">SEOだけでは足りない時代。AI検索での存在感を、スマートに確保しませんか。</p>
+                    <div class="raksul-hero-cta">
+                        <a href="#demo" class="raksul-btn raksul-btn-primary">無料デモを試す</a>
+                        <a href="#features" class="raksul-btn raksul-btn-secondary">詳細を見る</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Stats Section -->
+        <section class="raksul-section">
+            <div class="raksul-container">
+                <div class="raksul-stats">
+                    <div class="raksul-stat">
+                        <span class="raksul-stat-number">97%</span>
+                        <span class="raksul-stat-label">AIサマリ表示率向上</span>
+                    </div>
+                    <div class="raksul-stat">
+                        <span class="raksul-stat-number">2分</span>
+                        <span class="raksul-stat-label">簡単セットアップ</span>
+                    </div>
+                    <div class="raksul-stat">
+                        <span class="raksul-stat-number">15,000+</span>
+                        <span class="raksul-stat-label">導入企業数</span>
+                    </div>
+                    <div class="raksul-stat">
+                        <span class="raksul-stat-number">24/7</span>
+                        <span class="raksul-stat-label">プレミアムサポート</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Problem Section -->
+        <section class="raksul-section raksul-section-gray">
+            <div class="raksul-container-narrow">
+                <h2 class="raksul-section-title">従来のSEOだけでは、もう勝てない時代へ</h2>
+                <p class="raksul-section-subtitle">Google検索にAIサマリが登場し、検索体験が根本的に変化。どんなに上位表示されても、AIサマリに取り上げられなければクリックされない現実があります。</p>
+            </div>
+        </section>
+        
+        <!-- Features Section -->
+        <section class="raksul-section" id="features">
+            <div class="raksul-container">
+                <h2 class="raksul-section-title">AIサマリに対応する、次世代WordPressプラグイン</h2>
+                <p class="raksul-section-subtitle">私たちのプラグインは、GoogleのAIサマリに最適化された記事作成を自動化します。</p>
+                
+                <div class="raksul-features">
+                    <div class="raksul-feature-card">
+                        <div class="raksul-feature-icon">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M9 12l2 2 4-4"/>
+                                <circle cx="12" cy="12" r="10"/>
+                            </svg>
+                        </div>
+                        <h3 class="raksul-feature-title">AIスマートチェック</h3>
+                        <p class="raksul-feature-description">記事がAIサマリに最適化されているかをリアルタイムで自動チェック。AIアルゴリズムが改善点を即座に提案します。</p>
+                    </div>
+                    
+                    <div class="raksul-feature-card">
+                        <div class="raksul-feature-icon">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                                <line x1="16" y1="2" x2="16" y2="6"/>
+                                <line x1="8" y1="2" x2="8" y2="6"/>
+                                <line x1="3" y1="10" x2="21" y2="10"/>
+                            </svg>
+                        </div>
+                        <h3 class="raksul-feature-title">高度な分析ダッシュボード</h3>
+                        <p class="raksul-feature-description">AIサマリへの表示率を美しいダッシュボードで可視化。データドリブンな戦略立案をサポートします。</p>
+                    </div>
+                    
+                    <div class="raksul-feature-card">
+                        <div class="raksul-feature-icon">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                                <polyline points="14,2 14,8 20,8"/>
+                                <line x1="16" y1="13" x2="8" y2="13"/>
+                                <line x1="16" y1="17" x2="8" y2="17"/>
+                                <polyline points="10,9 9,9 8,9"/>
+                            </svg>
+                        </div>
+                        <h3 class="raksul-feature-title">インテリジェント改善提案</h3>
+                        <p class="raksul-feature-description">機械学習による高度な分析で、具体的で実行可能な改善提案を自動生成。専門知識不要で最適化が実現できます。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Benefits Section -->
+        <section class="raksul-section raksul-section-gray" id="benefits">
+            <div class="raksul-container">
+                <h2 class="raksul-section-title">導入すれば、こんな未来が手に入ります</h2>
+                
+                <div class="raksul-features">
+                    <div class="raksul-feature-card">
+                        <div class="raksul-feature-icon">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M3 3v18h18"/>
+                                <path d="M18.7 8l-5.1 5.2-2.8-2.7L7 14.3"/>
+                            </svg>
+                        </div>
+                        <h3 class="raksul-feature-title">トラフィック減少を完全防御</h3>
+                        <p class="raksul-feature-description">SEO流入の減少をAIサマリ経由の露出で補完。サイトの存在感を維持・向上させます。</p>
+                    </div>
+                    
+                    <div class="raksul-feature-card">
+                        <div class="raksul-feature-icon">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"/>
+                                <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/>
+                                <path d="M12 17h.01"/>
+                            </svg>
+                        </div>
+                        <h3 class="raksul-feature-title">次世代検索体験での優位性確立</h3>
+                        <p class="raksul-feature-description">AIサマリ掲載により、直接訪問なしでもブランド認知と信頼度を大幅に向上できます。</p>
+                    </div>
+                    
+                    <div class="raksul-feature-card">
+                        <div class="raksul-feature-icon">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                                <rect x="7" y="12" width="3" height="8" rx="1"/>
+                                <rect x="10" y="8" width="3" height="12" rx="1"/>
+                                <rect x="13" y="6" width="3" height="14" rx="1"/>
+                            </svg>
+                        </div>
+                        <h3 class="raksul-feature-title">データドリブンな成果最大化</h3>
+                        <p class="raksul-feature-description">AIサマリ表示率を詳細に分析し、改善効果を定量的に把握。ROI向上を実現します。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- CTA Section -->
+        <section class="raksul-section" id="demo">
+            <div class="raksul-container">
+                <div class="raksul-cta">
+                    <div class="raksul-cta-content">
+                        <h2 class="raksul-cta-title">まずは無料デモで、変革を体感してください</h2>
+                        <p class="raksul-cta-subtitle">デモ版では機能制限がありますが、AIサマリ表示率の計測と改善提案の威力を実際に体験いただけます。あなたのサイトがAI時代でどう評価されているかを、今すぐ確認しましょう。</p>
+                        <a href="#demo" class="raksul-btn raksul-btn-secondary" style="background: white; color: var(--raksul-primary-600);">今すぐ無料デモを開始</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer class="raksul-footer">
+        <div class="raksul-container">
+            <div class="raksul-footer-grid">
+                <div class="raksul-footer-section">
+                    <h4>製品</h4>
+                    <ul>
+                        <li><a href="#">プラグイン概要</a></li>
+                        <li><a href="#">料金プラン</a></li>
+                        <li><a href="#">機能詳細</a></li>
+                        <li><a href="#">リリースノート</a></li>
+                    </ul>
+                </div>
+                
+                <div class="raksul-footer-section">
+                    <h4>リソース</h4>
+                    <ul>
+                        <li><a href="#">ドキュメント</a></li>
+                        <li><a href="#">ブログ</a></li>
+                        <li><a href="#">よくある質問</a></li>
+                        <li><a href="#">技術サポート</a></li>
+                    </ul>
+                </div>
+                
+                <div class="raksul-footer-section">
+                    <h4>会社情報</h4>
+                    <ul>
+                        <li><a href="#">会社概要</a></li>
+                        <li><a href="#">お問い合わせ</a></li>
+                        <li><a href="#">プライバシーポリシー</a></li>
+                        <li><a href="#">利用規約</a></li>
+                    </ul>
+                </div>
+                
+                <div class="raksul-footer-section">
+                    <h4>サポート</h4>
+                    <ul>
+                        <li><a href="#">ヘルプセンター</a></li>
+                        <li><a href="#">コミュニティ</a></li>
+                        <li><a href="#">お客様の声</a></li>
+                        <li><a href="#">パートナー</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="raksul-footer-bottom">
+                <p>&copy; 2025 AI Overview LP Theme. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
