@@ -1,0 +1,864 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Pattern 9: PayPay Style Guide - AI Overview LP Theme</title>
+    <meta name="description" content="Pattern 9: PayPayスタイルガイド - AI検索対策プラグインのランディングページ">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="assets/css/custom.css">
+    <style>
+        /* PayPay Style Guide inspired styles */
+        :root {
+            /* PayPay Brand Colors */
+            --paypay-red: #FF6B6A;
+            --paypay-red-dark: #E85A59;
+            --paypay-red-light: #FFB3B2;
+            --paypay-red-lighter: #FFDDDC;
+            --paypay-red-lightest: #FFF4F4;
+            
+            --paypay-blue: #00A1E8;
+            --paypay-blue-dark: #0085C7;
+            --paypay-blue-light: #66CCEF;
+            --paypay-blue-lighter: #B3E6F7;
+            --paypay-blue-lightest: #E6F7FD;
+            
+            --paypay-yellow: #FFDE00;
+            --paypay-yellow-dark: #FFD700;
+            --paypay-yellow-light: #FFEE66;
+            --paypay-yellow-lighter: #FFF799;
+            --paypay-yellow-lightest: #FFFBCC;
+            
+            --paypay-green: #00C896;
+            --paypay-green-dark: #00A87B;
+            --paypay-green-light: #66DBCB;
+            --paypay-green-lighter: #B3EDE5;
+            --paypay-green-lightest: #E6F9F2;
+            
+            --paypay-orange: #FF9500;
+            --paypay-orange-dark: #E67D00;
+            --paypay-orange-light: #FFCA66;
+            --paypay-orange-lighter: #FFE2B3;
+            --paypay-orange-lightest: #FFF5E6;
+            
+            --paypay-purple: #8B5CF6;
+            --paypay-purple-dark: #7C3AED;
+            --paypay-purple-light: #C084FC;
+            --paypay-purple-lighter: #DDD6FE;
+            --paypay-purple-lightest: #F3F0FF;
+            
+            /* Neutral Colors */
+            --paypay-black: #1A1A1A;
+            --paypay-gray-900: #2A2A2A;
+            --paypay-gray-800: #3D3D3D;
+            --paypay-gray-700: #525252;
+            --paypay-gray-600: #737373;
+            --paypay-gray-500: #A3A3A3;
+            --paypay-gray-400: #D4D4D4;
+            --paypay-gray-300: #E5E5E5;
+            --paypay-gray-200: #F3F3F3;
+            --paypay-gray-100: #F9F9F9;
+            --paypay-white: #FFFFFF;
+            
+            /* Typography */
+            --paypay-font-family: "Hiragino Kaku Gothic ProN", "Hiragino Sans", "Noto Sans JP", "YuGothic", "Yu Gothic", sans-serif;
+            --paypay-font-mono: "SF Mono", "Monaco", "Inconsolata", "Roboto Mono", monospace;
+            
+            --paypay-text-xs: 0.75rem;    /* 12px */
+            --paypay-text-sm: 0.875rem;   /* 14px */
+            --paypay-text-base: 1rem;     /* 16px */
+            --paypay-text-lg: 1.125rem;   /* 18px */
+            --paypay-text-xl: 1.25rem;    /* 20px */
+            --paypay-text-2xl: 1.5rem;    /* 24px */
+            --paypay-text-3xl: 1.875rem;  /* 30px */
+            --paypay-text-4xl: 2.25rem;   /* 36px */
+            --paypay-text-5xl: 3rem;      /* 48px */
+            --paypay-text-6xl: 3.75rem;   /* 60px */
+            
+            /* Spacing (based on 4px grid) */
+            --paypay-space-1: 0.25rem;    /* 4px */
+            --paypay-space-2: 0.5rem;     /* 8px */
+            --paypay-space-3: 0.75rem;    /* 12px */
+            --paypay-space-4: 1rem;       /* 16px */
+            --paypay-space-5: 1.25rem;    /* 20px */
+            --paypay-space-6: 1.5rem;     /* 24px */
+            --paypay-space-8: 2rem;       /* 32px */
+            --paypay-space-10: 2.5rem;    /* 40px */
+            --paypay-space-12: 3rem;      /* 48px */
+            --paypay-space-16: 4rem;      /* 64px */
+            --paypay-space-20: 5rem;      /* 80px */
+            --paypay-space-24: 6rem;      /* 96px */
+            --paypay-space-32: 8rem;      /* 128px */
+            
+            /* Border radius */
+            --paypay-radius-sm: 4px;
+            --paypay-radius-md: 8px;
+            --paypay-radius-lg: 12px;
+            --paypay-radius-xl: 16px;
+            --paypay-radius-2xl: 20px;
+            --paypay-radius-3xl: 24px;
+            --paypay-radius-full: 9999px;
+            
+            /* Shadows */
+            --paypay-shadow-sm: 0 2px 4px 0 rgba(0, 0, 0, 0.06);
+            --paypay-shadow-md: 0 4px 8px 0 rgba(0, 0, 0, 0.08);
+            --paypay-shadow-lg: 0 8px 16px 0 rgba(0, 0, 0, 0.1);
+            --paypay-shadow-xl: 0 12px 24px 0 rgba(0, 0, 0, 0.12);
+            --paypay-shadow-2xl: 0 24px 48px 0 rgba(0, 0, 0, 0.15);
+            
+            /* Animation */
+            --paypay-duration-fast: 150ms;
+            --paypay-duration-normal: 300ms;
+            --paypay-duration-slow: 500ms;
+            --paypay-easing-smooth: cubic-bezier(0.4, 0, 0.2, 1);
+            --paypay-easing-bounce: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        }
+        
+        .pattern-indicator {
+            position: fixed;
+            top: var(--paypay-space-4);
+            right: var(--paypay-space-4);
+            background: var(--paypay-red);
+            color: var(--paypay-white);
+            padding: var(--paypay-space-2) var(--paypay-space-4);
+            border-radius: var(--paypay-radius-xl);
+            font-size: var(--paypay-text-xs);
+            font-weight: 700;
+            z-index: 9999;
+            box-shadow: var(--paypay-shadow-lg);
+        }
+        
+        * {
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: var(--paypay-font-family);
+            line-height: 1.7;
+            color: var(--paypay-gray-900);
+            margin: 0;
+            background: var(--paypay-white);
+        }
+        
+        /* Header */
+        .paypay-header {
+            background: var(--paypay-white);
+            box-shadow: var(--paypay-shadow-sm);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .paypay-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: var(--paypay-space-4) var(--paypay-space-6);
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .paypay-logo {
+            font-size: var(--paypay-text-2xl);
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--paypay-red) 0%, var(--paypay-orange) 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-decoration: none;
+        }
+        
+        .paypay-nav-menu {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            gap: var(--paypay-space-6);
+        }
+        
+        .paypay-nav-menu a {
+            text-decoration: none;
+            color: var(--paypay-gray-700);
+            font-weight: 600;
+            padding: var(--paypay-space-3) var(--paypay-space-4);
+            border-radius: var(--paypay-radius-lg);
+            transition: all var(--paypay-duration-normal) var(--paypay-easing-smooth);
+            position: relative;
+        }
+        
+        .paypay-nav-menu a::before {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 50%;
+            width: 0;
+            height: 3px;
+            background: var(--paypay-red);
+            border-radius: var(--paypay-radius-full);
+            transition: all var(--paypay-duration-normal) var(--paypay-easing-bounce);
+            transform: translateX(-50%);
+        }
+        
+        .paypay-nav-menu a:hover {
+            color: var(--paypay-red);
+            background: var(--paypay-red-lightest);
+        }
+        
+        .paypay-nav-menu a:hover::before {
+            width: 80%;
+        }
+        
+        /* Container */
+        .paypay-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--paypay-space-6);
+        }
+        
+        .paypay-container-narrow {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 var(--paypay-space-6);
+        }
+        
+        /* Hero Section */
+        .paypay-hero {
+            background: linear-gradient(135deg, var(--paypay-red-lightest) 0%, var(--paypay-orange-lightest) 50%, var(--paypay-yellow-lightest) 100%);
+            padding: var(--paypay-space-20) 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .paypay-hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 200px;
+            height: 200px;
+            background: var(--paypay-red);
+            opacity: 0.1;
+            border-radius: 50%;
+            animation: float-red 8s ease-in-out infinite;
+        }
+        
+        .paypay-hero::after {
+            content: '';
+            position: absolute;
+            bottom: -30%;
+            left: -10%;
+            width: 150px;
+            height: 150px;
+            background: var(--paypay-blue);
+            opacity: 0.1;
+            border-radius: 50%;
+            animation: float-blue 6s ease-in-out infinite reverse;
+        }
+        
+        @keyframes float-red {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(180deg); }
+        }
+        
+        @keyframes float-blue {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-15px) rotate(-180deg); }
+        }
+        
+        .paypay-hero-content {
+            position: relative;
+            z-index: 2;
+        }
+        
+        .paypay-hero-title {
+            font-size: var(--paypay-text-5xl);
+            font-weight: 900;
+            color: var(--paypay-black);
+            margin-bottom: var(--paypay-space-6);
+            line-height: 1.2;
+            letter-spacing: -0.02em;
+        }
+        
+        .paypay-hero-title span {
+            background: linear-gradient(135deg, var(--paypay-red) 0%, var(--paypay-orange) 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .paypay-hero-subtitle {
+            font-size: var(--paypay-text-xl);
+            color: var(--paypay-gray-700);
+            margin-bottom: var(--paypay-space-10);
+            line-height: 1.6;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .paypay-hero-cta {
+            display: flex;
+            justify-content: center;
+            gap: var(--paypay-space-4);
+            flex-wrap: wrap;
+        }
+        
+        /* PayPay Style Buttons */
+        .paypay-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: var(--paypay-space-4) var(--paypay-space-8);
+            font-size: var(--paypay-text-base);
+            font-weight: 700;
+            text-decoration: none;
+            border-radius: var(--paypay-radius-2xl);
+            transition: all var(--paypay-duration-normal) var(--paypay-easing-bounce);
+            border: none;
+            cursor: pointer;
+            gap: var(--paypay-space-2);
+            position: relative;
+            overflow: hidden;
+            min-width: 160px;
+            box-shadow: var(--paypay-shadow-md);
+        }
+        
+        .paypay-btn::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            transition: all var(--paypay-duration-slow) var(--paypay-easing-smooth);
+            transform: translate(-50%, -50%);
+        }
+        
+        .paypay-btn:hover::before {
+            width: 300px;
+            height: 300px;
+        }
+        
+        .paypay-btn-primary {
+            background: linear-gradient(135deg, var(--paypay-red) 0%, var(--paypay-red-dark) 100%);
+            color: var(--paypay-white);
+        }
+        
+        .paypay-btn-primary:hover {
+            background: linear-gradient(135deg, var(--paypay-red-dark) 0%, var(--paypay-red) 100%);
+            transform: translateY(-2px);
+            box-shadow: var(--paypay-shadow-xl);
+        }
+        
+        .paypay-btn-secondary {
+            background: linear-gradient(135deg, var(--paypay-blue) 0%, var(--paypay-blue-dark) 100%);
+            color: var(--paypay-white);
+        }
+        
+        .paypay-btn-secondary:hover {
+            background: linear-gradient(135deg, var(--paypay-blue-dark) 0%, var(--paypay-blue) 100%);
+            transform: translateY(-2px);
+            box-shadow: var(--paypay-shadow-xl);
+        }
+        
+        /* Sections */
+        .paypay-section {
+            padding: var(--paypay-space-20) 0;
+        }
+        
+        .paypay-section-colored {
+            background: linear-gradient(135deg, var(--paypay-gray-100) 0%, var(--paypay-blue-lightest) 100%);
+        }
+        
+        .paypay-section-title {
+            font-size: var(--paypay-text-4xl);
+            font-weight: 800;
+            color: var(--paypay-black);
+            text-align: center;
+            margin-bottom: var(--paypay-space-6);
+            line-height: 1.2;
+            letter-spacing: -0.02em;
+        }
+        
+        .paypay-section-subtitle {
+            font-size: var(--paypay-text-lg);
+            color: var(--paypay-gray-600);
+            text-align: center;
+            margin-bottom: var(--paypay-space-12);
+            line-height: 1.7;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        /* Card Grid */
+        .paypay-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: var(--paypay-space-8);
+            margin-top: var(--paypay-space-12);
+        }
+        
+        .paypay-card {
+            background: var(--paypay-white);
+            border-radius: var(--paypay-radius-2xl);
+            padding: var(--paypay-space-8);
+            box-shadow: var(--paypay-shadow-lg);
+            transition: all var(--paypay-duration-normal) var(--paypay-easing-smooth);
+            position: relative;
+            overflow: hidden;
+            border: 1px solid var(--paypay-gray-200);
+        }
+        
+        .paypay-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--paypay-red) 0%, var(--paypay-orange) 50%, var(--paypay-yellow) 100%);
+        }
+        
+        .paypay-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--paypay-shadow-2xl);
+        }
+        
+        .paypay-card-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--paypay-red-lighter) 0%, var(--paypay-orange-lighter) 100%);
+            border-radius: var(--paypay-radius-xl);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: var(--paypay-space-6);
+            color: var(--paypay-red-dark);
+        }
+        
+        .paypay-card-title {
+            font-size: var(--paypay-text-xl);
+            font-weight: 700;
+            color: var(--paypay-black);
+            margin-bottom: var(--paypay-space-4);
+            line-height: 1.3;
+        }
+        
+        .paypay-card-description {
+            color: var(--paypay-gray-600);
+            line-height: 1.7;
+        }
+        
+        /* Stats */
+        .paypay-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: var(--paypay-space-6);
+            margin: var(--paypay-space-12) 0;
+        }
+        
+        .paypay-stat {
+            text-align: center;
+            padding: var(--paypay-space-8);
+            background: var(--paypay-white);
+            border-radius: var(--paypay-radius-2xl);
+            box-shadow: var(--paypay-shadow-md);
+            position: relative;
+            overflow: hidden;
+            transition: all var(--paypay-duration-normal) var(--paypay-easing-smooth);
+        }
+        
+        .paypay-stat::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--paypay-blue) 0%, var(--paypay-green) 100%);
+        }
+        
+        .paypay-stat:hover {
+            transform: scale(1.05);
+        }
+        
+        .paypay-stat-number {
+            font-size: var(--paypay-text-4xl);
+            font-weight: 900;
+            background: linear-gradient(135deg, var(--paypay-red) 0%, var(--paypay-orange) 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            display: block;
+            margin-bottom: var(--paypay-space-3);
+        }
+        
+        .paypay-stat-label {
+            color: var(--paypay-gray-600);
+            font-size: var(--paypay-text-sm);
+            font-weight: 600;
+        }
+        
+        /* CTA Section */
+        .paypay-cta {
+            background: linear-gradient(135deg, var(--paypay-red) 0%, var(--paypay-orange) 50%, var(--paypay-yellow) 100%);
+            color: var(--paypay-white);
+            text-align: center;
+            padding: var(--paypay-space-20) var(--paypay-space-8);
+            border-radius: var(--paypay-radius-3xl);
+            margin: var(--paypay-space-16) 0;
+            position: relative;
+            overflow: hidden;
+            box-shadow: var(--paypay-shadow-2xl);
+        }
+        
+        .paypay-cta::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200px;
+            height: 200px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            animation: float-cta 10s ease-in-out infinite;
+        }
+        
+        @keyframes float-cta {
+            0%, 100% { transform: translate(0, 0) rotate(0deg); }
+            25% { transform: translate(100px, -50px) rotate(90deg); }
+            50% { transform: translate(200px, 0) rotate(180deg); }
+            75% { transform: translate(100px, 50px) rotate(270deg); }
+        }
+        
+        .paypay-cta-content {
+            position: relative;
+            z-index: 2;
+        }
+        
+        .paypay-cta-title {
+            font-size: var(--paypay-text-4xl);
+            font-weight: 800;
+            margin-bottom: var(--paypay-space-6);
+            line-height: 1.2;
+        }
+        
+        .paypay-cta-subtitle {
+            font-size: var(--paypay-text-lg);
+            margin-bottom: var(--paypay-space-10);
+            line-height: 1.7;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            opacity: 0.95;
+        }
+        
+        /* Footer */
+        .paypay-footer {
+            background: var(--paypay-black);
+            color: var(--paypay-white);
+            padding: var(--paypay-space-20) 0 var(--paypay-space-8) 0;
+        }
+        
+        .paypay-footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: var(--paypay-space-8);
+            margin-bottom: var(--paypay-space-12);
+        }
+        
+        .paypay-footer-section h4 {
+            color: var(--paypay-white);
+            font-weight: 700;
+            margin-bottom: var(--paypay-space-5);
+            font-size: var(--paypay-text-lg);
+        }
+        
+        .paypay-footer-section ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .paypay-footer-section li {
+            margin-bottom: var(--paypay-space-3);
+        }
+        
+        .paypay-footer-section a {
+            color: var(--paypay-gray-400);
+            text-decoration: none;
+            transition: color var(--paypay-duration-normal) var(--paypay-easing-smooth);
+            font-weight: 500;
+        }
+        
+        .paypay-footer-section a:hover {
+            color: var(--paypay-red-light);
+        }
+        
+        .paypay-footer-bottom {
+            border-top: 1px solid var(--paypay-gray-700);
+            padding-top: var(--paypay-space-8);
+            text-align: center;
+            color: var(--paypay-gray-500);
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .paypay-nav {
+                padding: var(--paypay-space-4);
+            }
+            
+            .paypay-nav-menu {
+                display: none;
+            }
+            
+            .paypay-hero-title {
+                font-size: var(--paypay-text-4xl);
+            }
+            
+            .paypay-hero-cta {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .paypay-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .paypay-stats {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .paypay-container,
+            .paypay-container-narrow {
+                padding: 0 var(--paypay-space-4);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="pattern-indicator">Pattern 9: PayPay</div>
+    
+    <header class="paypay-header">
+        <nav class="paypay-nav">
+            <a href="#" class="paypay-logo">AI Overview LP Theme</a>
+            <ul class="paypay-nav-menu">
+                <li><a href="#home">ホーム</a></li>
+                <li><a href="#features">機能</a></li>
+                <li><a href="#benefits">ベネフィット</a></li>
+                <li><a href="#demo">デモ</a></li>
+                <li><a href="#contact">お問い合わせ</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <!-- Hero Section -->
+        <section class="paypay-hero" id="home">
+            <div class="paypay-container">
+                <div class="paypay-hero-content">
+                    <h1 class="paypay-hero-title">Google検索の新時代<br><span>AIサマリ</span>で勝利を掴む</h1>
+                    <p class="paypay-hero-subtitle">SEOだけでは到達できない領域へ。AI検索での存在感を、シンプルに、確実に手に入れましょう。</p>
+                    <div class="paypay-hero-cta">
+                        <a href="#demo" class="paypay-btn paypay-btn-primary">今すぐ無料で始める</a>
+                        <a href="#features" class="paypay-btn paypay-btn-secondary">機能を詳しく見る</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Stats Section -->
+        <section class="paypay-section">
+            <div class="paypay-container">
+                <div class="paypay-stats">
+                    <div class="paypay-stat">
+                        <span class="paypay-stat-number">96%</span>
+                        <span class="paypay-stat-label">AIサマリ掲載率向上</span>
+                    </div>
+                    <div class="paypay-stat">
+                        <span class="paypay-stat-number">30秒</span>
+                        <span class="paypay-stat-label">かんたんセットアップ</span>
+                    </div>
+                    <div class="paypay-stat">
+                        <span class="paypay-stat-number">18,000+</span>
+                        <span class="paypay-stat-label">利用者数</span>
+                    </div>
+                    <div class="paypay-stat">
+                        <span class="paypay-stat-number">24時間</span>
+                        <span class="paypay-stat-label">安心サポート</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Problem Section -->
+        <section class="paypay-section paypay-section-colored">
+            <div class="paypay-container-narrow">
+                <h2 class="paypay-section-title">従来のSEOだけでは、もう勝てない時代</h2>
+                <p class="paypay-section-subtitle">Google検索にAIサマリが登場し、多くのユーザーはその要約だけで情報を得ています。どんなに上位表示されても、AIサマリに選ばれなければ見られない現実があります。</p>
+            </div>
+        </section>
+        
+        <!-- Features Section -->
+        <section class="paypay-section" id="features">
+            <div class="paypay-container">
+                <h2 class="paypay-section-title">AIサマリに最適化する、シンプルで強力なプラグイン</h2>
+                <p class="paypay-section-subtitle">私たちのプラグインは、GoogleのAIサマリに拾われやすい記事作成を誰でもかんたんにできるようサポートします。</p>
+                
+                <div class="paypay-grid">
+                    <div class="paypay-card">
+                        <div class="paypay-card-icon">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                <path d="M9 12l2 2 4-4"/>
+                                <circle cx="12" cy="12" r="10"/>
+                            </svg>
+                        </div>
+                        <h3 class="paypay-card-title">かんたん自動チェック</h3>
+                        <p class="paypay-card-description">記事を投稿するだけで、AIサマリに最適化されているかを自動チェック。面倒な設定は一切不要です。</p>
+                    </div>
+                    
+                    <div class="paypay-card">
+                        <div class="paypay-card-icon">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                                <line x1="16" y1="2" x2="16" y2="6"/>
+                                <line x1="8" y1="2" x2="8" y2="6"/>
+                                <line x1="3" y1="10" x2="21" y2="10"/>
+                            </svg>
+                        </div>
+                        <h3 class="paypay-card-title">わかりやすい分析画面</h3>
+                        <p class="paypay-card-description">AIサマリでの表示状況を、見やすいグラフとシンプルな数字で確認。成果が一目でわかります。</p>
+                    </div>
+                    
+                    <div class="paypay-card">
+                        <div class="paypay-card-icon">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                                <polyline points="14,2 14,8 20,8"/>
+                                <line x1="16" y1="13" x2="8" y2="13"/>
+                                <line x1="16" y1="17" x2="8" y2="17"/>
+                                <polyline points="10,9 9,9 8,9"/>
+                            </svg>
+                        </div>
+                        <h3 class="paypay-card-title">的確な改善アドバイス</h3>
+                        <p class="paypay-card-description">専門知識がなくても大丈夫。AIが具体的で実践的な改善案を提案し、すぐに実行できます。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Benefits Section -->
+        <section class="paypay-section paypay-section-colored" id="benefits">
+            <div class="paypay-container">
+                <h2 class="paypay-section-title">導入すれば、こんな未来が待っています</h2>
+                
+                <div class="paypay-grid">
+                    <div class="paypay-card">
+                        <div class="paypay-card-icon">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                <path d="M3 3v18h18"/>
+                                <path d="M18.7 8l-5.1 5.2-2.8-2.7L7 14.3"/>
+                            </svg>
+                        </div>
+                        <h3 class="paypay-card-title">アクセス数の回復と増加</h3>
+                        <p class="paypay-card-description">SEOだけでは減少していたアクセス数を、AIサマリ経由で回復・増加させます。</p>
+                    </div>
+                    
+                    <div class="paypay-card">
+                        <div class="paypay-card-icon">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                <circle cx="12" cy="12" r="10"/>
+                                <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/>
+                                <path d="M12 17h.01"/>
+                            </svg>
+                        </div>
+                        <h3 class="paypay-card-title">ブランド認知度の向上</h3>
+                        <p class="paypay-card-description">AIサマリに掲載されることで、クリックされなくてもブランドの露出と信頼性が大幅にアップします。</p>
+                    </div>
+                    
+                    <div class="paypay-card">
+                        <div class="paypay-card-icon">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                                <rect x="7" y="12" width="3" height="8" rx="1"/>
+                                <rect x="10" y="8" width="3" height="12" rx="1"/>
+                                <rect x="13" y="6" width="3" height="14" rx="1"/>
+                            </svg>
+                        </div>
+                        <h3 class="paypay-card-title">成果が数字で見える</h3>
+                        <p class="paypay-card-description">AIサマリ表示回数や効果を数値で確認でき、投資した時間と費用の成果を実感できます。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- CTA Section -->
+        <section class="paypay-section" id="demo">
+            <div class="paypay-container">
+                <div class="paypay-cta">
+                    <div class="paypay-cta-content">
+                        <h2 class="paypay-cta-title">まずは無料で、効果を体験してみませんか？</h2>
+                        <p class="paypay-cta-subtitle">無料デモでは一部機能の制限がありますが、AIサマリ表示率の計測と改善提案の威力を実際に体験できます。あなたのサイトがAI時代でどう評価されているか、今すぐ確認してみましょう。</p>
+                        <a href="#demo" class="paypay-btn paypay-btn-secondary" style="background: linear-gradient(135deg, var(--paypay-white) 0%, var(--paypay-gray-100) 100%); color: var(--paypay-red); font-weight: 800;">今すぐ無料で始める</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer class="paypay-footer">
+        <div class="paypay-container">
+            <div class="paypay-footer-grid">
+                <div class="paypay-footer-section">
+                    <h4>製品情報</h4>
+                    <ul>
+                        <li><a href="#">プラグイン概要</a></li>
+                        <li><a href="#">料金プラン</a></li>
+                        <li><a href="#">機能一覧</a></li>
+                        <li><a href="#">アップデート</a></li>
+                    </ul>
+                </div>
+                
+                <div class="paypay-footer-section">
+                    <h4>サポート</h4>
+                    <ul>
+                        <li><a href="#">使い方ガイド</a></li>
+                        <li><a href="#">よくある質問</a></li>
+                        <li><a href="#">お問い合わせ</a></li>
+                        <li><a href="#">技術サポート</a></li>
+                    </ul>
+                </div>
+                
+                <div class="paypay-footer-section">
+                    <h4>会社情報</h4>
+                    <ul>
+                        <li><a href="#">運営会社</a></li>
+                        <li><a href="#">プライバシーポリシー</a></li>
+                        <li><a href="#">利用規約</a></li>
+                        <li><a href="#">特定商取引法</a></li>
+                    </ul>
+                </div>
+                
+                <div class="paypay-footer-section">
+                    <h4>コミュニティ</h4>
+                    <ul>
+                        <li><a href="#">ユーザーの声</a></li>
+                        <li><a href="#">事例紹介</a></li>
+                        <li><a href="#">ブログ</a></li>
+                        <li><a href="#">パートナー</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="paypay-footer-bottom">
+                <p>&copy; 2025 AI Overview LP Theme. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

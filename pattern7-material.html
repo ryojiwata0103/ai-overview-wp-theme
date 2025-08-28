@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Pattern 7: Material Design 3 - AI Overview LP Theme</title>
+    <meta name="description" content="Pattern 7: Material Design 3 - AI検索対策プラグインのランディングページ">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="assets/css/custom.css">
+    <style>
+        /* Material Design 3 inspired styles */
+        :root {
+            /* Material Design 3 Color Tokens */
+            --md-sys-color-primary: #6750A4;
+            --md-sys-color-on-primary: #FFFFFF;
+            --md-sys-color-primary-container: #EADDFF;
+            --md-sys-color-on-primary-container: #21005D;
+            
+            --md-sys-color-secondary: #625B71;
+            --md-sys-color-on-secondary: #FFFFFF;
+            --md-sys-color-secondary-container: #E8DEF8;
+            --md-sys-color-on-secondary-container: #1D192B;
+            
+            --md-sys-color-tertiary: #7D5260;
+            --md-sys-color-on-tertiary: #FFFFFF;
+            --md-sys-color-tertiary-container: #FFD8E4;
+            --md-sys-color-on-tertiary-container: #31111D;
+            
+            --md-sys-color-surface: #FFFBFE;
+            --md-sys-color-on-surface: #1C1B1F;
+            --md-sys-color-surface-variant: #E7E0EC;
+            --md-sys-color-on-surface-variant: #49454F;
+            
+            --md-sys-color-outline: #79747E;
+            --md-sys-color-outline-variant: #CAC4D0;
+            
+            --md-sys-color-error: #B3261E;
+            --md-sys-color-on-error: #FFFFFF;
+            --md-sys-color-error-container: #F9DEDC;
+            --md-sys-color-on-error-container: #410E0B;
+            
+            --md-sys-color-success: #006A6B;
+            --md-sys-color-on-success: #FFFFFF;
+            --md-sys-color-success-container: #6FF6F7;
+            --md-sys-color-on-success-container: #002020;
+            
+            /* Elevation Tokens */
+            --md-sys-elevation-level0: 0px 0px 0px 0px rgba(0, 0, 0, 0.2);
+            --md-sys-elevation-level1: 0px 1px 2px 0px rgba(0, 0, 0, 0.3), 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+            --md-sys-elevation-level2: 0px 1px 2px 0px rgba(0, 0, 0, 0.3), 0px 2px 6px 2px rgba(0, 0, 0, 0.15);
+            --md-sys-elevation-level3: 0px 1px 3px 0px rgba(0, 0, 0, 0.3), 0px 4px 8px 3px rgba(0, 0, 0, 0.15);
+            --md-sys-elevation-level4: 0px 2px 3px 0px rgba(0, 0, 0, 0.3), 0px 6px 10px 4px rgba(0, 0, 0, 0.15);
+            --md-sys-elevation-level5: 0px 4px 4px 0px rgba(0, 0, 0, 0.3), 0px 8px 12px 6px rgba(0, 0, 0, 0.15);
+            
+            /* Typography Scale */
+            --md-sys-typescale-display-large-font-family: "Google Sans", "Roboto", sans-serif;
+            --md-sys-typescale-display-large-font-size: 57px;
+            --md-sys-typescale-display-large-font-weight: 400;
+            --md-sys-typescale-display-large-line-height: 64px;
+            --md-sys-typescale-display-large-letter-spacing: -0.25px;
+            
+            --md-sys-typescale-headline-large-font-family: "Google Sans", "Roboto", sans-serif;
+            --md-sys-typescale-headline-large-font-size: 32px;
+            --md-sys-typescale-headline-large-font-weight: 400;
+            --md-sys-typescale-headline-large-line-height: 40px;
+            --md-sys-typescale-headline-large-letter-spacing: 0px;
+            
+            --md-sys-typescale-headline-medium-font-family: "Google Sans", "Roboto", sans-serif;
+            --md-sys-typescale-headline-medium-font-size: 28px;
+            --md-sys-typescale-headline-medium-font-weight: 400;
+            --md-sys-typescale-headline-medium-line-height: 36px;
+            --md-sys-typescale-headline-medium-letter-spacing: 0px;
+            
+            --md-sys-typescale-title-large-font-family: "Roboto", sans-serif;
+            --md-sys-typescale-title-large-font-size: 22px;
+            --md-sys-typescale-title-large-font-weight: 400;
+            --md-sys-typescale-title-large-line-height: 28px;
+            --md-sys-typescale-title-large-letter-spacing: 0px;
+            
+            --md-sys-typescale-body-large-font-family: "Roboto", sans-serif;
+            --md-sys-typescale-body-large-font-size: 16px;
+            --md-sys-typescale-body-large-font-weight: 400;
+            --md-sys-typescale-body-large-line-height: 24px;
+            --md-sys-typescale-body-large-letter-spacing: 0.15px;
+            
+            --md-sys-typescale-body-medium-font-family: "Roboto", sans-serif;
+            --md-sys-typescale-body-medium-font-size: 14px;
+            --md-sys-typescale-body-medium-font-weight: 400;
+            --md-sys-typescale-body-medium-line-height: 20px;
+            --md-sys-typescale-body-medium-letter-spacing: 0.25px;
+            
+            --md-sys-typescale-label-large-font-family: "Roboto", sans-serif;
+            --md-sys-typescale-label-large-font-size: 14px;
+            --md-sys-typescale-label-large-font-weight: 500;
+            --md-sys-typescale-label-large-line-height: 20px;
+            --md-sys-typescale-label-large-letter-spacing: 0.1px;
+            
+            /* Shape Tokens */
+            --md-sys-shape-corner-none: 0px;
+            --md-sys-shape-corner-extra-small: 4px;
+            --md-sys-shape-corner-small: 8px;
+            --md-sys-shape-corner-medium: 12px;
+            --md-sys-shape-corner-large: 16px;
+            --md-sys-shape-corner-extra-large: 28px;
+            --md-sys-shape-corner-full: 1000px;
+            
+            /* Motion Tokens */
+            --md-sys-motion-easing-standard: cubic-bezier(0.2, 0, 0, 1);
+            --md-sys-motion-easing-decelerate: cubic-bezier(0, 0, 0, 1);
+            --md-sys-motion-easing-accelerate: cubic-bezier(0.3, 0, 1, 1);
+            --md-sys-motion-duration-short1: 50ms;
+            --md-sys-motion-duration-short2: 100ms;
+            --md-sys-motion-duration-short3: 150ms;
+            --md-sys-motion-duration-medium1: 250ms;
+            --md-sys-motion-duration-medium2: 300ms;
+            --md-sys-motion-duration-long1: 450ms;
+        }
+        
+        .pattern-indicator {
+            position: fixed;
+            top: 16px;
+            right: 16px;
+            background: var(--md-sys-color-primary);
+            color: var(--md-sys-color-on-primary);
+            padding: 8px 16px;
+            border-radius: var(--md-sys-shape-corner-medium);
+            font-family: var(--md-sys-typescale-body-medium-font-family);
+            font-size: var(--md-sys-typescale-body-medium-font-size);
+            font-weight: var(--md-sys-typescale-label-large-font-weight);
+            z-index: 9999;
+            box-shadow: var(--md-sys-elevation-level3);
+        }
+        
+        * {
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: var(--md-sys-typescale-body-large-font-family);
+            font-size: var(--md-sys-typescale-body-large-font-size);
+            line-height: var(--md-sys-typescale-body-large-line-height);
+            letter-spacing: var(--md-sys-typescale-body-large-letter-spacing);
+            color: var(--md-sys-color-on-surface);
+            margin: 0;
+            background: var(--md-sys-color-surface);
+        }
+        
+        /* Header */
+        .md-header {
+            background: var(--md-sys-color-surface);
+            box-shadow: var(--md-sys-elevation-level2);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .md-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 16px 24px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .md-logo {
+            font-family: var(--md-sys-typescale-headline-medium-font-family);
+            font-size: var(--md-sys-typescale-title-large-font-size);
+            font-weight: 500;
+            color: var(--md-sys-color-primary);
+            text-decoration: none;
+        }
+        
+        .md-nav-menu {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            gap: 8px;
+        }
+        
+        .md-nav-menu a {
+            text-decoration: none;
+            color: var(--md-sys-color-on-surface);
+            font-family: var(--md-sys-typescale-label-large-font-family);
+            font-size: var(--md-sys-typescale-label-large-font-size);
+            font-weight: var(--md-sys-typescale-label-large-font-weight);
+            padding: 12px 16px;
+            border-radius: var(--md-sys-shape-corner-full);
+            transition: all var(--md-sys-motion-duration-medium1) var(--md-sys-motion-easing-standard);
+            position: relative;
+        }
+        
+        .md-nav-menu a:hover {
+            background: var(--md-sys-color-secondary-container);
+            color: var(--md-sys-color-on-secondary-container);
+        }
+        
+        /* Container */
+        .md-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+        
+        .md-container-narrow {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+        
+        /* Hero Section */
+        .md-hero {
+            background: linear-gradient(135deg, var(--md-sys-color-primary-container) 0%, var(--md-sys-color-surface) 100%);
+            padding: 80px 0;
+            text-align: center;
+        }
+        
+        .md-hero-title {
+            font-family: var(--md-sys-typescale-display-large-font-family);
+            font-size: var(--md-sys-typescale-display-large-font-size);
+            font-weight: var(--md-sys-typescale-display-large-font-weight);
+            line-height: var(--md-sys-typescale-display-large-line-height);
+            letter-spacing: var(--md-sys-typescale-display-large-letter-spacing);
+            color: var(--md-sys-color-on-surface);
+            margin-bottom: 16px;
+        }
+        
+        .md-hero-subtitle {
+            font-family: var(--md-sys-typescale-headline-medium-font-family);
+            font-size: var(--md-sys-typescale-body-large-font-size);
+            color: var(--md-sys-color-on-surface-variant);
+            margin-bottom: 40px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .md-hero-cta {
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+        
+        /* Material Buttons */
+        .md-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 64px;
+            height: 40px;
+            padding: 0 24px;
+            font-family: var(--md-sys-typescale-label-large-font-family);
+            font-size: var(--md-sys-typescale-label-large-font-size);
+            font-weight: var(--md-sys-typescale-label-large-font-weight);
+            letter-spacing: var(--md-sys-typescale-label-large-letter-spacing);
+            text-decoration: none;
+            border-radius: var(--md-sys-shape-corner-full);
+            border: none;
+            cursor: pointer;
+            transition: all var(--md-sys-motion-duration-medium1) var(--md-sys-motion-easing-standard);
+            position: relative;
+            overflow: hidden;
+            gap: 8px;
+        }
+        
+        .md-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: currentColor;
+            opacity: 0;
+            transition: opacity var(--md-sys-motion-duration-short3) var(--md-sys-motion-easing-standard);
+        }
+        
+        .md-btn:hover::before {
+            opacity: 0.08;
+        }
+        
+        .md-btn:focus::before {
+            opacity: 0.12;
+        }
+        
+        .md-btn:active::before {
+            opacity: 0.12;
+        }
+        
+        .md-btn-filled {
+            background: var(--md-sys-color-primary);
+            color: var(--md-sys-color-on-primary);
+            box-shadow: var(--md-sys-elevation-level0);
+        }
+        
+        .md-btn-filled:hover {
+            box-shadow: var(--md-sys-elevation-level1);
+        }
+        
+        .md-btn-outlined {
+            background: transparent;
+            color: var(--md-sys-color-primary);
+            border: 1px solid var(--md-sys-color-outline);
+        }
+        
+        .md-btn-outlined:hover {
+            background: var(--md-sys-color-primary-container);
+        }
+        
+        /* Sections */
+        .md-section {
+            padding: 64px 0;
+        }
+        
+        .md-section-secondary {
+            background: var(--md-sys-color-secondary-container);
+        }
+        
+        .md-section-title {
+            font-family: var(--md-sys-typescale-headline-large-font-family);
+            font-size: var(--md-sys-typescale-headline-large-font-size);
+            font-weight: var(--md-sys-typescale-headline-large-font-weight);
+            line-height: var(--md-sys-typescale-headline-large-line-height);
+            color: var(--md-sys-color-on-surface);
+            text-align: center;
+            margin-bottom: 16px;
+        }
+        
+        .md-section-subtitle {
+            font-size: var(--md-sys-typescale-body-large-font-size);
+            color: var(--md-sys-color-on-surface-variant);
+            text-align: center;
+            margin-bottom: 48px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        /* Card Grid */
+        .md-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 24px;
+            margin-top: 48px;
+        }
+        
+        .md-card {
+            background: var(--md-sys-color-surface);
+            border-radius: var(--md-sys-shape-corner-large);
+            padding: 24px;
+            box-shadow: var(--md-sys-elevation-level1);
+            transition: all var(--md-sys-motion-duration-medium1) var(--md-sys-motion-easing-standard);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .md-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: var(--md-sys-color-on-surface);
+            opacity: 0;
+            transition: opacity var(--md-sys-motion-duration-medium1) var(--md-sys-motion-easing-standard);
+        }
+        
+        .md-card:hover {
+            box-shadow: var(--md-sys-elevation-level2);
+        }
+        
+        .md-card:hover::before {
+            opacity: 0.04;
+        }
+        
+        .md-card-icon {
+            width: 40px;
+            height: 40px;
+            background: var(--md-sys-color-primary-container);
+            color: var(--md-sys-color-on-primary-container);
+            border-radius: var(--md-sys-shape-corner-medium);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 16px;
+        }
+        
+        .md-card-title {
+            font-family: var(--md-sys-typescale-title-large-font-family);
+            font-size: var(--md-sys-typescale-title-large-font-size);
+            font-weight: var(--md-sys-typescale-title-large-font-weight);
+            line-height: var(--md-sys-typescale-title-large-line-height);
+            color: var(--md-sys-color-on-surface);
+            margin-bottom: 8px;
+        }
+        
+        .md-card-description {
+            color: var(--md-sys-color-on-surface-variant);
+            line-height: 1.5;
+        }
+        
+        /* Stats */
+        .md-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 24px;
+            margin: 48px 0;
+        }
+        
+        .md-stat {
+            text-align: center;
+            padding: 24px;
+            background: var(--md-sys-color-surface);
+            border-radius: var(--md-sys-shape-corner-large);
+            box-shadow: var(--md-sys-elevation-level1);
+        }
+        
+        .md-stat-number {
+            font-family: var(--md-sys-typescale-headline-large-font-family);
+            font-size: var(--md-sys-typescale-headline-large-font-size);
+            font-weight: 700;
+            color: var(--md-sys-color-primary);
+            display: block;
+            margin-bottom: 8px;
+        }
+        
+        .md-stat-label {
+            color: var(--md-sys-color-on-surface-variant);
+            font-size: var(--md-sys-typescale-body-medium-font-size);
+        }
+        
+        /* CTA Section */
+        .md-cta {
+            background: var(--md-sys-color-primary);
+            color: var(--md-sys-color-on-primary);
+            text-align: center;
+            padding: 48px 24px;
+            border-radius: var(--md-sys-shape-corner-extra-large);
+            margin: 48px 0;
+            box-shadow: var(--md-sys-elevation-level2);
+        }
+        
+        .md-cta-title {
+            font-family: var(--md-sys-typescale-headline-large-font-family);
+            font-size: var(--md-sys-typescale-headline-large-font-size);
+            font-weight: var(--md-sys-typescale-headline-large-font-weight);
+            margin-bottom: 16px;
+        }
+        
+        .md-cta-subtitle {
+            opacity: 0.9;
+            margin-bottom: 32px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        /* Footer */
+        .md-footer {
+            background: var(--md-sys-color-surface-variant);
+            color: var(--md-sys-color-on-surface-variant);
+            padding: 48px 0 24px 0;
+        }
+        
+        .md-footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 32px;
+            margin-bottom: 32px;
+        }
+        
+        .md-footer-section h4 {
+            color: var(--md-sys-color-on-surface);
+            font-weight: 500;
+            margin-bottom: 16px;
+        }
+        
+        .md-footer-section ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .md-footer-section li {
+            margin-bottom: 8px;
+        }
+        
+        .md-footer-section a {
+            color: var(--md-sys-color-on-surface-variant);
+            text-decoration: none;
+            transition: color var(--md-sys-motion-duration-medium1) var(--md-sys-motion-easing-standard);
+        }
+        
+        .md-footer-section a:hover {
+            color: var(--md-sys-color-primary);
+        }
+        
+        .md-footer-bottom {
+            border-top: 1px solid var(--md-sys-color-outline-variant);
+            padding-top: 24px;
+            text-align: center;
+            color: var(--md-sys-color-on-surface-variant);
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .md-nav {
+                padding: 16px;
+            }
+            
+            .md-nav-menu {
+                display: none;
+            }
+            
+            .md-hero-title {
+                font-size: var(--md-sys-typescale-headline-large-font-size);
+            }
+            
+            .md-hero-cta {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .md-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .md-stats {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .md-container,
+            .md-container-narrow {
+                padding: 0 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="pattern-indicator">Pattern 7: Material Design 3</div>
+    
+    <header class="md-header">
+        <nav class="md-nav">
+            <a href="#" class="md-logo">AI Overview LP Theme</a>
+            <ul class="md-nav-menu">
+                <li><a href="#home">ホーム</a></li>
+                <li><a href="#features">機能</a></li>
+                <li><a href="#benefits">ベネフィット</a></li>
+                <li><a href="#demo">デモ</a></li>
+                <li><a href="#contact">お問い合わせ</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <!-- Hero Section -->
+        <section class="md-hero" id="home">
+            <div class="md-container">
+                <h1 class="md-hero-title">Google検索の新時代<br>AIサマリで勝つ</h1>
+                <p class="md-hero-subtitle">SEOだけでは足りない時代。AI検索での存在感を、スマートに確保しませんか。</p>
+                <div class="md-hero-cta">
+                    <a href="#demo" class="md-btn md-btn-filled">無料デモを試す</a>
+                    <a href="#features" class="md-btn md-btn-outlined">詳細を見る</a>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Stats Section -->
+        <section class="md-section">
+            <div class="md-container">
+                <div class="md-stats">
+                    <div class="md-stat">
+                        <span class="md-stat-number">98%</span>
+                        <span class="md-stat-label">AIサマリ表示率向上</span>
+                    </div>
+                    <div class="md-stat">
+                        <span class="md-stat-number">30秒</span>
+                        <span class="md-stat-label">セットアップ完了</span>
+                    </div>
+                    <div class="md-stat">
+                        <span class="md-stat-number">20,000+</span>
+                        <span class="md-stat-label">導入サイト数</span>
+                    </div>
+                    <div class="md-stat">
+                        <span class="md-stat-number">99.9%</span>
+                        <span class="md-stat-label">サービス稼働率</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Problem Section -->
+        <section class="md-section md-section-secondary">
+            <div class="md-container-narrow">
+                <h2 class="md-section-title">従来のSEOだけでは、もう勝てない時代へ</h2>
+                <p class="md-section-subtitle">Google検索にAIサマリが登場し、検索体験が根本的に変化しました。どんなに上位表示されても、AIサマリに取り上げられなければクリックされない新しい現実があります。</p>
+            </div>
+        </section>
+        
+        <!-- Features Section -->
+        <section class="md-section" id="features">
+            <div class="md-container">
+                <h2 class="md-section-title">AIサマリに対応する、次世代WordPressプラグイン</h2>
+                <p class="md-section-subtitle">私たちのプラグインは、GoogleのAIサマリに最適化された記事作成をサポートします。</p>
+                
+                <div class="md-grid">
+                    <div class="md-card">
+                        <div class="md-card-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M9 12l2 2 4-4"/>
+                                <circle cx="12" cy="12" r="10"/>
+                            </svg>
+                        </div>
+                        <h3 class="md-card-title">自動チェック機能</h3>
+                        <p class="md-card-description">記事がAIサマリに最適化されているかをリアルタイムで自動チェック。改善点を即座に提案します。</p>
+                    </div>
+                    
+                    <div class="md-card">
+                        <div class="md-card-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                                <line x1="16" y1="2" x2="16" y2="6"/>
+                                <line x1="8" y1="2" x2="8" y2="6"/>
+                                <line x1="3" y1="10" x2="21" y2="10"/>
+                            </svg>
+                        </div>
+                        <h3 class="md-card-title">分析ダッシュボード</h3>
+                        <p class="md-card-description">AIサマリへの表示率を美しいダッシュボードで可視化。データに基づいた戦略立案をサポートします。</p>
+                    </div>
+                    
+                    <div class="md-card">
+                        <div class="md-card-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                                <polyline points="14,2 14,8 20,8"/>
+                                <line x1="16" y1="13" x2="8" y2="13"/>
+                                <line x1="16" y1="17" x2="8" y2="17"/>
+                                <polyline points="10,9 9,9 8,9"/>
+                            </svg>
+                        </div>
+                        <h3 class="md-card-title">改善提案機能</h3>
+                        <p class="md-card-description">AIが記事を分析し、具体的で実行可能な改善提案を生成。専門知識がなくても最適化が可能です。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Benefits Section -->
+        <section class="md-section md-section-secondary" id="benefits">
+            <div class="md-container">
+                <h2 class="md-section-title">導入すれば、こんな未来が手に入ります</h2>
+                
+                <div class="md-grid">
+                    <div class="md-card">
+                        <div class="md-card-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M3 3v18h18"/>
+                                <path d="M18.7 8l-5.1 5.2-2.8-2.7L7 14.3"/>
+                            </svg>
+                        </div>
+                        <h3 class="md-card-title">トラフィック減少を防ぐ</h3>
+                        <p class="md-card-description">SEO流入の減少をAIサマリ経由の露出で補完し、サイトの存在感を維持・向上させます。</p>
+                    </div>
+                    
+                    <div class="md-card">
+                        <div class="md-card-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"/>
+                                <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/>
+                                <path d="M12 17h.01"/>
+                            </svg>
+                        </div>
+                        <h3 class="md-card-title">新しい検索体験での優位性</h3>
+                        <p class="md-card-description">AIサマリ掲載により、直接訪問なしでもブランド認知と信頼度を大幅に向上できます。</p>
+                    </div>
+                    
+                    <div class="md-card">
+                        <div class="md-card-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                                <rect x="7" y="12" width="3" height="8" rx="1"/>
+                                <rect x="10" y="8" width="3" height="12" rx="1"/>
+                                <rect x="13" y="6" width="3" height="14" rx="1"/>
+                            </svg>
+                        </div>
+                        <h3 class="md-card-title">数値で成果を実感</h3>
+                        <p class="md-card-description">AIサマリ表示率を詳細に分析し、改善効果を定量的に把握できます。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- CTA Section -->
+        <section class="md-section" id="demo">
+            <div class="md-container">
+                <div class="md-cta">
+                    <h2 class="md-cta-title">まずは無料デモで、変化を実感してください</h2>
+                    <p class="md-cta-subtitle">デモ版では機能制限がありますが、AIサマリ表示率の計測と改善提案を体験できます。実際にあなたのサイトがAIにどう評価されているかを、今すぐ確認しましょう。</p>
+                    <a href="#demo" class="md-btn md-btn-outlined" style="background: transparent; color: currentColor; border-color: currentColor;">今すぐ無料デモを試す</a>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer class="md-footer">
+        <div class="md-container">
+            <div class="md-footer-grid">
+                <div class="md-footer-section">
+                    <h4>製品</h4>
+                    <ul>
+                        <li><a href="#">プラグイン概要</a></li>
+                        <li><a href="#">料金プラン</a></li>
+                        <li><a href="#">機能詳細</a></li>
+                        <li><a href="#">アップデート</a></li>
+                    </ul>
+                </div>
+                
+                <div class="md-footer-section">
+                    <h4>リソース</h4>
+                    <ul>
+                        <li><a href="#">ドキュメント</a></li>
+                        <li><a href="#">ブログ</a></li>
+                        <li><a href="#">よくある質問</a></li>
+                        <li><a href="#">サポート</a></li>
+                    </ul>
+                </div>
+                
+                <div class="md-footer-section">
+                    <h4>会社情報</h4>
+                    <ul>
+                        <li><a href="#">会社概要</a></li>
+                        <li><a href="#">お問い合わせ</a></li>
+                        <li><a href="#">プライバシーポリシー</a></li>
+                        <li><a href="#">利用規約</a></li>
+                    </ul>
+                </div>
+                
+                <div class="md-footer-section">
+                    <h4>サポート</h4>
+                    <ul>
+                        <li><a href="#">ヘルプセンター</a></li>
+                        <li><a href="#">技術サポート</a></li>
+                        <li><a href="#">コミュニティ</a></li>
+                        <li><a href="#">フィードバック</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="md-footer-bottom">
+                <p>&copy; 2025 AI Overview LP Theme. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

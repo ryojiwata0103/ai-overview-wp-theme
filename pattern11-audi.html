@@ -1,0 +1,861 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Pattern 11: Audi Brand System - AI Overview LP Theme</title>
+    <meta name="description" content="Pattern 11: Audiブランドシステム - AI検索対策プラグインのランディングページ">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="assets/css/custom.css">
+    <style>
+        /* Audi Brand System inspired styles */
+        :root {
+            /* Audi Brand Colors */
+            --audi-red: #BB0A30;
+            --audi-red-dark: #9A0826;
+            --audi-red-light: #D63857;
+            --audi-red-lighter: #E67A8C;
+            --audi-red-lightest: #F5E6E9;
+            
+            --audi-black: #000000;
+            --audi-black-light: #1A1A1A;
+            --audi-black-lighter: #333333;
+            
+            --audi-gray-900: #0F0F0F;
+            --audi-gray-800: #1F1F1F;
+            --audi-gray-700: #333333;
+            --audi-gray-600: #4D4D4D;
+            --audi-gray-500: #666666;
+            --audi-gray-400: #999999;
+            --audi-gray-300: #CCCCCC;
+            --audi-gray-200: #E6E6E6;
+            --audi-gray-100: #F0F0F0;
+            --audi-gray-50: #F8F8F8;
+            --audi-white: #FFFFFF;
+            
+            /* Audi Accent Colors */
+            --audi-blue: #0066CC;
+            --audi-blue-dark: #004499;
+            --audi-blue-light: #3385D6;
+            
+            --audi-silver: #C0C0C0;
+            --audi-silver-dark: #A0A0A0;
+            --audi-silver-light: #E0E0E0;
+            
+            /* Typography */
+            --audi-font-primary: "Audi Type", "Helvetica Neue", "Arial", sans-serif;
+            --audi-font-extended: "Audi Type Extended", "Helvetica Neue", "Arial", sans-serif;
+            --audi-font-fallback: "Helvetica Neue", "Arial", "Noto Sans JP", "Hiragino Kaku Gothic ProN", sans-serif;
+            
+            --audi-text-xs: 0.75rem;     /* 12px */
+            --audi-text-sm: 0.875rem;    /* 14px */
+            --audi-text-base: 1rem;      /* 16px */
+            --audi-text-lg: 1.125rem;    /* 18px */
+            --audi-text-xl: 1.25rem;     /* 20px */
+            --audi-text-2xl: 1.5rem;     /* 24px */
+            --audi-text-3xl: 1.875rem;   /* 30px */
+            --audi-text-4xl: 2.25rem;    /* 36px */
+            --audi-text-5xl: 3rem;       /* 48px */
+            --audi-text-6xl: 3.75rem;    /* 60px */
+            --audi-text-7xl: 4.5rem;     /* 72px */
+            
+            /* Spacing System */
+            --audi-space-1: 0.25rem;     /* 4px */
+            --audi-space-2: 0.5rem;      /* 8px */
+            --audi-space-3: 0.75rem;     /* 12px */
+            --audi-space-4: 1rem;        /* 16px */
+            --audi-space-5: 1.25rem;     /* 20px */
+            --audi-space-6: 1.5rem;      /* 24px */
+            --audi-space-8: 2rem;        /* 32px */
+            --audi-space-10: 2.5rem;     /* 40px */
+            --audi-space-12: 3rem;       /* 48px */
+            --audi-space-16: 4rem;       /* 64px */
+            --audi-space-20: 5rem;       /* 80px */
+            --audi-space-24: 6rem;       /* 96px */
+            --audi-space-32: 8rem;       /* 128px */
+            --audi-space-40: 10rem;      /* 160px */
+            
+            /* Layout Grid */
+            --audi-container-sm: 640px;
+            --audi-container-md: 768px;
+            --audi-container-lg: 1024px;
+            --audi-container-xl: 1280px;
+            --audi-container-2xl: 1536px;
+            
+            /* Shadows */
+            --audi-shadow-subtle: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+            --audi-shadow-soft: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            --audi-shadow-medium: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+            --audi-shadow-strong: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+            --audi-shadow-dramatic: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+            
+            /* Motion */
+            --audi-duration-fast: 100ms;
+            --audi-duration-normal: 200ms;
+            --audi-duration-slow: 400ms;
+            --audi-ease-standard: cubic-bezier(0.4, 0.0, 0.2, 1);
+            --audi-ease-decelerate: cubic-bezier(0.0, 0.0, 0.2, 1);
+            --audi-ease-accelerate: cubic-bezier(0.4, 0.0, 1, 1);
+        }
+        
+        .pattern-indicator {
+            position: fixed;
+            top: var(--audi-space-6);
+            right: var(--audi-space-6);
+            background: var(--audi-red);
+            color: var(--audi-white);
+            padding: var(--audi-space-2) var(--audi-space-4);
+            font-family: var(--audi-font-fallback);
+            font-size: var(--audi-text-xs);
+            font-weight: 700;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            z-index: 9999;
+            border: 1px solid var(--audi-red-dark);
+        }
+        
+        * {
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: var(--audi-font-fallback);
+            line-height: 1.6;
+            color: var(--audi-gray-900);
+            margin: 0;
+            background: var(--audi-white);
+            font-weight: 300;
+            letter-spacing: 0.01em;
+        }
+        
+        /* Header */
+        .audi-header {
+            background: var(--audi-white);
+            border-bottom: 1px solid var(--audi-gray-200);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .audi-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: var(--audi-space-6) var(--audi-space-8);
+            max-width: var(--audi-container-2xl);
+            margin: 0 auto;
+        }
+        
+        .audi-logo {
+            font-size: var(--audi-text-2xl);
+            font-weight: 100;
+            color: var(--audi-black);
+            text-decoration: none;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+        }
+        
+        .audi-nav-menu {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            gap: var(--audi-space-8);
+        }
+        
+        .audi-nav-menu a {
+            text-decoration: none;
+            color: var(--audi-gray-700);
+            font-weight: 300;
+            font-size: var(--audi-text-sm);
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            padding: var(--audi-space-3) 0;
+            transition: all var(--audi-duration-normal) var(--audi-ease-standard);
+            position: relative;
+        }
+        
+        .audi-nav-menu a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 1px;
+            background: var(--audi-red);
+            transition: width var(--audi-duration-normal) var(--audi-ease-standard);
+        }
+        
+        .audi-nav-menu a:hover {
+            color: var(--audi-red);
+        }
+        
+        .audi-nav-menu a:hover::after {
+            width: 100%;
+        }
+        
+        /* Container */
+        .audi-container {
+            max-width: var(--audi-container-2xl);
+            margin: 0 auto;
+            padding: 0 var(--audi-space-8);
+        }
+        
+        .audi-container-narrow {
+            max-width: var(--audi-container-lg);
+            margin: 0 auto;
+            padding: 0 var(--audi-space-8);
+        }
+        
+        /* Hero Section */
+        .audi-hero {
+            background: linear-gradient(135deg, var(--audi-white) 0%, var(--audi-gray-50) 100%);
+            padding: var(--audi-space-32) 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .audi-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, transparent 30%, rgba(187, 10, 48, 0.02) 50%, transparent 70%);
+        }
+        
+        .audi-hero-content {
+            position: relative;
+            z-index: 2;
+        }
+        
+        .audi-hero-title {
+            font-size: var(--audi-text-6xl);
+            font-weight: 100;
+            color: var(--audi-black);
+            margin-bottom: var(--audi-space-8);
+            line-height: 1.1;
+            letter-spacing: -0.02em;
+        }
+        
+        .audi-hero-title span {
+            font-weight: 700;
+            color: var(--audi-red);
+        }
+        
+        .audi-hero-subtitle {
+            font-size: var(--audi-text-xl);
+            color: var(--audi-gray-600);
+            margin-bottom: var(--audi-space-12);
+            line-height: 1.5;
+            font-weight: 300;
+            max-width: 720px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .audi-hero-cta {
+            display: flex;
+            justify-content: center;
+            gap: var(--audi-space-6);
+            flex-wrap: wrap;
+        }
+        
+        /* Audi Style Buttons */
+        .audi-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: var(--audi-space-4) var(--audi-space-8);
+            font-size: var(--audi-text-sm);
+            font-weight: 400;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            text-decoration: none;
+            border: 1px solid transparent;
+            cursor: pointer;
+            transition: all var(--audi-duration-normal) var(--audi-ease-standard);
+            gap: var(--audi-space-3);
+            position: relative;
+            overflow: hidden;
+            min-width: 180px;
+        }
+        
+        .audi-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: left var(--audi-duration-slow) var(--audi-ease-standard);
+        }
+        
+        .audi-btn:hover::before {
+            left: 100%;
+        }
+        
+        .audi-btn-primary {
+            background: var(--audi-red);
+            color: var(--audi-white);
+            border-color: var(--audi-red);
+        }
+        
+        .audi-btn-primary:hover {
+            background: var(--audi-red-dark);
+            border-color: var(--audi-red-dark);
+            transform: translateY(-1px);
+            box-shadow: var(--audi-shadow-soft);
+        }
+        
+        .audi-btn-secondary {
+            background: transparent;
+            color: var(--audi-black);
+            border-color: var(--audi-black);
+        }
+        
+        .audi-btn-secondary:hover {
+            background: var(--audi-black);
+            color: var(--audi-white);
+            transform: translateY(-1px);
+            box-shadow: var(--audi-shadow-soft);
+        }
+        
+        /* Sections */
+        .audi-section {
+            padding: var(--audi-space-24) 0;
+        }
+        
+        .audi-section-dark {
+            background: var(--audi-gray-900);
+            color: var(--audi-white);
+        }
+        
+        .audi-section-light {
+            background: var(--audi-gray-50);
+        }
+        
+        .audi-section-title {
+            font-size: var(--audi-text-4xl);
+            font-weight: 100;
+            color: inherit;
+            text-align: center;
+            margin-bottom: var(--audi-space-8);
+            line-height: 1.2;
+            letter-spacing: -0.01em;
+        }
+        
+        .audi-section-subtitle {
+            font-size: var(--audi-text-lg);
+            color: var(--audi-gray-600);
+            text-align: center;
+            margin-bottom: var(--audi-space-16);
+            line-height: 1.6;
+            font-weight: 300;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .audi-section-dark .audi-section-subtitle {
+            color: var(--audi-gray-300);
+        }
+        
+        /* Grid System */
+        .audi-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+            gap: var(--audi-space-8);
+            margin-top: var(--audi-space-16);
+        }
+        
+        .audi-grid-3 {
+            grid-template-columns: repeat(3, 1fr);
+        }
+        
+        /* Cards */
+        .audi-card {
+            background: var(--audi-white);
+            padding: var(--audi-space-8);
+            transition: all var(--audi-duration-normal) var(--audi-ease-standard);
+            position: relative;
+            border: 1px solid var(--audi-gray-200);
+        }
+        
+        .audi-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 2px;
+            height: 0;
+            background: var(--audi-red);
+            transition: height var(--audi-duration-normal) var(--audi-ease-standard);
+        }
+        
+        .audi-card:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--audi-shadow-medium);
+        }
+        
+        .audi-card:hover::before {
+            height: 100%;
+        }
+        
+        .audi-card-dark {
+            background: var(--audi-gray-800);
+            color: var(--audi-white);
+            border-color: var(--audi-gray-700);
+        }
+        
+        .audi-card-icon {
+            width: 48px;
+            height: 48px;
+            background: var(--audi-gray-100);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: var(--audi-space-6);
+            color: var(--audi-red);
+        }
+        
+        .audi-card-dark .audi-card-icon {
+            background: var(--audi-gray-700);
+            color: var(--audi-white);
+        }
+        
+        .audi-card-title {
+            font-size: var(--audi-text-xl);
+            font-weight: 400;
+            color: inherit;
+            margin-bottom: var(--audi-space-4);
+            line-height: 1.3;
+            letter-spacing: 0.01em;
+        }
+        
+        .audi-card-description {
+            color: var(--audi-gray-600);
+            line-height: 1.6;
+            font-weight: 300;
+        }
+        
+        .audi-card-dark .audi-card-description {
+            color: var(--audi-gray-300);
+        }
+        
+        /* Stats */
+        .audi-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: var(--audi-space-8);
+            margin: var(--audi-space-20) 0;
+        }
+        
+        .audi-stat {
+            text-align: center;
+            padding: var(--audi-space-10);
+            background: var(--audi-white);
+            border: 1px solid var(--audi-gray-200);
+            transition: all var(--audi-duration-normal) var(--audi-ease-standard);
+            position: relative;
+        }
+        
+        .audi-stat::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: 0;
+            height: 2px;
+            background: var(--audi-red);
+            transition: width var(--audi-duration-normal) var(--audi-ease-standard);
+            transform: translateX(-50%);
+        }
+        
+        .audi-stat:hover {
+            transform: scale(1.02);
+            box-shadow: var(--audi-shadow-soft);
+        }
+        
+        .audi-stat:hover::after {
+            width: 60%;
+        }
+        
+        .audi-stat-number {
+            font-size: var(--audi-text-4xl);
+            font-weight: 100;
+            color: var(--audi-red);
+            display: block;
+            margin-bottom: var(--audi-space-3);
+            letter-spacing: -0.02em;
+        }
+        
+        .audi-stat-label {
+            color: var(--audi-gray-600);
+            font-size: var(--audi-text-sm);
+            font-weight: 300;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+        }
+        
+        /* CTA Section */
+        .audi-cta {
+            background: var(--audi-black);
+            color: var(--audi-white);
+            text-align: center;
+            padding: var(--audi-space-20) var(--audi-space-8);
+            margin: var(--audi-space-20) 0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .audi-cta::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, transparent 30%, rgba(187, 10, 48, 0.1) 50%, transparent 70%);
+        }
+        
+        .audi-cta-content {
+            position: relative;
+            z-index: 2;
+        }
+        
+        .audi-cta-title {
+            font-size: var(--audi-text-4xl);
+            font-weight: 100;
+            margin-bottom: var(--audi-space-8);
+            line-height: 1.2;
+            letter-spacing: -0.01em;
+        }
+        
+        .audi-cta-subtitle {
+            font-size: var(--audi-text-lg);
+            margin-bottom: var(--audi-space-12);
+            line-height: 1.6;
+            font-weight: 300;
+            max-width: 720px;
+            margin-left: auto;
+            margin-right: auto;
+            color: var(--audi-gray-300);
+        }
+        
+        /* Footer */
+        .audi-footer {
+            background: var(--audi-gray-900);
+            color: var(--audi-gray-300);
+            padding: var(--audi-space-24) 0 var(--audi-space-8) 0;
+        }
+        
+        .audi-footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: var(--audi-space-10);
+            margin-bottom: var(--audi-space-16);
+        }
+        
+        .audi-footer-section h4 {
+            color: var(--audi-white);
+            font-weight: 400;
+            margin-bottom: var(--audi-space-6);
+            font-size: var(--audi-text-lg);
+            letter-spacing: 0.01em;
+        }
+        
+        .audi-footer-section ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .audi-footer-section li {
+            margin-bottom: var(--audi-space-3);
+        }
+        
+        .audi-footer-section a {
+            color: var(--audi-gray-400);
+            text-decoration: none;
+            font-weight: 300;
+            font-size: var(--audi-text-sm);
+            transition: color var(--audi-duration-normal) var(--audi-ease-standard);
+        }
+        
+        .audi-footer-section a:hover {
+            color: var(--audi-white);
+        }
+        
+        .audi-footer-bottom {
+            border-top: 1px solid var(--audi-gray-700);
+            padding-top: var(--audi-space-8);
+            text-align: center;
+            color: var(--audi-gray-500);
+            font-size: var(--audi-text-sm);
+            font-weight: 300;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .audi-nav {
+                padding: var(--audi-space-4) var(--audi-space-6);
+            }
+            
+            .audi-nav-menu {
+                display: none;
+            }
+            
+            .audi-hero-title {
+                font-size: var(--audi-text-4xl);
+            }
+            
+            .audi-hero-cta {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .audi-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .audi-grid-3 {
+                grid-template-columns: 1fr;
+            }
+            
+            .audi-stats {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .audi-container,
+            .audi-container-narrow {
+                padding: 0 var(--audi-space-6);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="pattern-indicator">Pattern 11: Audi</div>
+    
+    <header class="audi-header">
+        <nav class="audi-nav">
+            <a href="#" class="audi-logo">AI Overview LP Theme</a>
+            <ul class="audi-nav-menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#benefits">Benefits</a></li>
+                <li><a href="#demo">Demo</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <!-- Hero Section -->
+        <section class="audi-hero" id="home">
+            <div class="audi-container">
+                <div class="audi-hero-content">
+                    <h1 class="audi-hero-title">Google検索の新時代<br><span>Precision.</span> Excellence. AI.</h1>
+                    <p class="audi-hero-subtitle">従来のSEO戦略を超越し、AI検索エコシステムにおけるプレミアムな存在感を、精密に構築いたします。</p>
+                    <div class="audi-hero-cta">
+                        <a href="#demo" class="audi-btn audi-btn-primary">Excellence を体験</a>
+                        <a href="#features" class="audi-btn audi-btn-secondary">詳細を確認</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Stats Section -->
+        <section class="audi-section">
+            <div class="audi-container">
+                <div class="audi-stats">
+                    <div class="audi-stat">
+                        <span class="audi-stat-number">99.5%</span>
+                        <span class="audi-stat-label">Precision Rate</span>
+                    </div>
+                    <div class="audi-stat">
+                        <span class="audi-stat-number">15s</span>
+                        <span class="audi-stat-label">Setup Time</span>
+                    </div>
+                    <div class="audi-stat">
+                        <span class="audi-stat-number">50,000+</span>
+                        <span class="audi-stat-label">Premium Clients</span>
+                    </div>
+                    <div class="audi-stat">
+                        <span class="audi-stat-number">24/7</span>
+                        <span class="audi-stat-label">Concierge Support</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Problem Section -->
+        <section class="audi-section audi-section-light">
+            <div class="audi-container-narrow">
+                <h2 class="audi-section-title">従来のアプローチでは、真の優位性を確立できない</h2>
+                <p class="audi-section-subtitle">Google検索におけるAIサマリの導入により、デジタルマーケティングの競争環境は根本的に変化いたしました。最高水準の戦略的アプローチが、プレミアムブランドには不可欠です。</p>
+            </div>
+        </section>
+        
+        <!-- Features Section -->
+        <section class="audi-section" id="features">
+            <div class="audi-container">
+                <h2 class="audi-section-title">プレミアムAI最適化ソリューション</h2>
+                <p class="audi-section-subtitle">最高峰の技術力により、GoogleのAIサマリにおける最適なポジショニングを実現いたします。</p>
+                
+                <div class="audi-grid audi-grid-3">
+                    <div class="audi-card">
+                        <div class="audi-card-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M9 12l2 2 4-4"/>
+                                <circle cx="12" cy="12" r="10"/>
+                            </svg>
+                        </div>
+                        <h3 class="audi-card-title">Precision Quality Assurance</h3>
+                        <p class="audi-card-description">最先端のアルゴリズムにより、AIサマリ最適化の精度を極限まで追求。プレミアムな品質をお約束いたします。</p>
+                    </div>
+                    
+                    <div class="audi-card">
+                        <div class="audi-card-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                                <line x1="16" y1="2" x2="16" y2="6"/>
+                                <line x1="8" y1="2" x2="8" y2="6"/>
+                                <line x1="3" y1="10" x2="21" y2="10"/>
+                            </svg>
+                        </div>
+                        <h3 class="audi-card-title">Executive Dashboard</h3>
+                        <p class="audi-card-description">直感的で洗練されたインターフェースにより、AIサマリのパフォーマンスを一目で把握。経営陣レベルの意思決定をサポートします。</p>
+                    </div>
+                    
+                    <div class="audi-card">
+                        <div class="audi-card-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                                <polyline points="14,2 14,8 20,8"/>
+                                <line x1="16" y1="13" x2="8" y2="13"/>
+                                <line x1="16" y1="17" x2="8" y2="17"/>
+                                <polyline points="10,9 9,9 8,9"/>
+                            </svg>
+                        </div>
+                        <h3 class="audi-card-title">Strategic Intelligence</h3>
+                        <p class="audi-card-description">AIが戦略的な最適化案を自動生成。専門知識を必要とせず、最高品質の結果を実現します。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Benefits Section -->
+        <section class="audi-section audi-section-dark" id="benefits">
+            <div class="audi-container">
+                <h2 class="audi-section-title">導入による戦略的価値</h2>
+                
+                <div class="audi-grid audi-grid-3">
+                    <div class="audi-card audi-card-dark">
+                        <div class="audi-card-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M3 3v18h18"/>
+                                <path d="M18.7 8l-5.1 5.2-2.8-2.7L7 14.3"/>
+                            </svg>
+                        </div>
+                        <h3 class="audi-card-title">Market Leadership</h3>
+                        <p class="audi-card-description">AIサマリにおける優位なポジショニングにより、競合他社を圧倒的に引き離す市場支配力を確立します。</p>
+                    </div>
+                    
+                    <div class="audi-card audi-card-dark">
+                        <div class="audi-card-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <circle cx="12" cy="12" r="10"/>
+                                <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/>
+                                <path d="M12 17h.01"/>
+                            </svg>
+                        </div>
+                        <h3 class="audi-card-title">Premium Brand Presence</h3>
+                        <p class="audi-card-description">AIサマリでの露出により、ブランドの威信と信頼性を大幅に向上。プレミアムポジショニングを確立します。</p>
+                    </div>
+                    
+                    <div class="audi-card audi-card-dark">
+                        <div class="audi-card-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                                <rect x="7" y="12" width="3" height="8" rx="1"/>
+                                <rect x="10" y="8" width="3" height="12" rx="1"/>
+                                <rect x="13" y="6" width="3" height="14" rx="1"/>
+                            </svg>
+                        </div>
+                        <h3 class="audi-card-title">Excellence Analytics</h3>
+                        <p class="audi-card-description">精密な分析により投資対効果を定量化。継続的な改善と最適化を通じて、卓越した成果を実現します。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- CTA Section -->
+        <section class="audi-section" id="demo">
+            <div class="audi-container">
+                <div class="audi-cta">
+                    <div class="audi-cta-content">
+                        <h2 class="audi-cta-title">Excellence への招待</h2>
+                        <p class="audi-cta-subtitle">プレミアム体験版では一部機能に制限がございますが、AI最適化の真の価値をご体感いただけます。あなたのブランドがAI時代において、いかなる卓越性を発揮できるかをご確認ください。</p>
+                        <a href="#demo" class="audi-btn audi-btn-primary">Premium Experience を開始</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer class="audi-footer">
+        <div class="audi-container">
+            <div class="audi-footer-grid">
+                <div class="audi-footer-section">
+                    <h4>Premium Solutions</h4>
+                    <ul>
+                        <li><a href="#">Enterprise Edition</a></li>
+                        <li><a href="#">Professional Services</a></li>
+                        <li><a href="#">Technical Specifications</a></li>
+                        <li><a href="#">Performance Metrics</a></li>
+                    </ul>
+                </div>
+                
+                <div class="audi-footer-section">
+                    <h4>Excellence Support</h4>
+                    <ul>
+                        <li><a href="#">Concierge Service</a></li>
+                        <li><a href="#">Technical Documentation</a></li>
+                        <li><a href="#">Best Practices</a></li>
+                        <li><a href="#">Strategic Consulting</a></li>
+                    </ul>
+                </div>
+                
+                <div class="audi-footer-section">
+                    <h4>Corporate</h4>
+                    <ul>
+                        <li><a href="#">Company Profile</a></li>
+                        <li><a href="#">Executive Contact</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+                
+                <div class="audi-footer-section">
+                    <h4>Partnership</h4>
+                    <ul>
+                        <li><a href="#">Strategic Alliances</a></li>
+                        <li><a href="#">Channel Partners</a></li>
+                        <li><a href="#">Executive Programs</a></li>
+                        <li><a href="#">Investment Relations</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="audi-footer-bottom">
+                <p>&copy; 2025 AI Overview LP Theme. Excellence delivered. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
