@@ -1,0 +1,804 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Pattern 4: Figma UI2 Inspired - AI Overview LP Theme</title>
+    <meta name="description" content="Pattern 4: Figma UI2風デザイン - AI検索対策プラグインのランディングページ">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="assets/css/custom.css">
+    <style>
+        /* Figma UI2 inspired design system */
+        :root {
+            /* Figma UI2 Color Palette */
+            --figma-purple-100: #F3F0FF;
+            --figma-purple-200: #E4DDFF;
+            --figma-purple-300: #C4B5FD;
+            --figma-purple-400: #A78BFA;
+            --figma-purple-500: #8B5CF6;
+            --figma-purple-600: #7C3AED;
+            --figma-purple-700: #6D28D9;
+            --figma-purple-800: #5B21B6;
+            --figma-purple-900: #4C1D95;
+            
+            --figma-blue-100: #DBEAFE;
+            --figma-blue-200: #BFDBFE;
+            --figma-blue-300: #93C5FD;
+            --figma-blue-400: #60A5FA;
+            --figma-blue-500: #3B82F6;
+            --figma-blue-600: #2563EB;
+            --figma-blue-700: #1D4ED8;
+            --figma-blue-800: #1E40AF;
+            --figma-blue-900: #1E3A8A;
+            
+            --figma-gray-50: #F9FAFB;
+            --figma-gray-100: #F3F4F6;
+            --figma-gray-200: #E5E7EB;
+            --figma-gray-300: #D1D5DB;
+            --figma-gray-400: #9CA3AF;
+            --figma-gray-500: #6B7280;
+            --figma-gray-600: #4B5563;
+            --figma-gray-700: #374151;
+            --figma-gray-800: #1F2937;
+            --figma-gray-900: #111827;
+            
+            --figma-green-400: #4ADE80;
+            --figma-green-500: #22C55E;
+            --figma-orange-400: #FB923C;
+            --figma-red-400: #F87171;
+            --figma-pink-400: #F472B6;
+            
+            /* Typography */
+            --figma-font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            --figma-font-mono: 'JetBrains Mono', 'Fira Code', 'Consolas', 'Monaco', monospace;
+            
+            /* Spacing (using 8px grid) */
+            --figma-space-1: 4px;
+            --figma-space-2: 8px;
+            --figma-space-3: 12px;
+            --figma-space-4: 16px;
+            --figma-space-5: 20px;
+            --figma-space-6: 24px;
+            --figma-space-8: 32px;
+            --figma-space-10: 40px;
+            --figma-space-12: 48px;
+            --figma-space-16: 64px;
+            --figma-space-20: 80px;
+            --figma-space-24: 96px;
+            
+            /* Border Radius */
+            --figma-radius-sm: 6px;
+            --figma-radius-md: 12px;
+            --figma-radius-lg: 16px;
+            --figma-radius-xl: 24px;
+            --figma-radius-full: 9999px;
+            
+            /* Shadows */
+            --figma-shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+            --figma-shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            --figma-shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            --figma-shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        
+        * {
+            font-family: var(--figma-font-family);
+        }
+        
+        .pattern-indicator {
+            position: fixed;
+            top: 16px;
+            right: 16px;
+            background: linear-gradient(135deg, var(--figma-purple-600) 0%, var(--figma-blue-600) 100%);
+            color: white;
+            padding: var(--figma-space-2) var(--figma-space-3);
+            border-radius: var(--figma-radius-md);
+            font-size: 12px;
+            font-weight: 500;
+            z-index: 9999;
+            box-shadow: var(--figma-shadow-lg);
+        }
+        
+        /* Figma-style navigation */
+        .figma-nav {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--figma-gray-200);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .figma-nav .site-title {
+            font-weight: 700;
+            font-size: 18px;
+            color: var(--figma-gray-900);
+            background: linear-gradient(135deg, var(--figma-purple-600) 0%, var(--figma-blue-600) 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .figma-nav .nav-menu a {
+            font-weight: 500;
+            color: var(--figma-gray-600);
+            font-size: 14px;
+            text-decoration: none;
+            transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+            padding: var(--figma-space-2) var(--figma-space-4);
+            border-radius: var(--figma-radius-sm);
+            position: relative;
+        }
+        
+        .figma-nav .nav-menu a::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 50%;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(90deg, var(--figma-purple-500) 0%, var(--figma-blue-500) 100%);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            transform: translateX(-50%);
+        }
+        
+        .figma-nav .nav-menu a:hover,
+        .figma-nav .nav-menu a:focus {
+            color: var(--figma-purple-600);
+            background: var(--figma-purple-50);
+        }
+        
+        .figma-nav .nav-menu a:hover::after {
+            width: 80%;
+        }
+        
+        /* Figma Hero */
+        .figma-hero {
+            background: linear-gradient(135deg, var(--figma-gray-50) 0%, var(--figma-purple-100) 50%, var(--figma-blue-100) 100%);
+            padding: var(--figma-space-20) 0 var(--figma-space-16);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .figma-hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(139, 92, 246, 0.1) 0%, rgba(59, 130, 246, 0.1) 50%, transparent 70%);
+            animation: rotate 20s linear infinite;
+        }
+        
+        @keyframes rotate {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        .figma-hero-content {
+            position: relative;
+            z-index: 2;
+        }
+        
+        .figma-hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: var(--figma-space-2);
+            background: white;
+            border: 1px solid var(--figma-purple-200);
+            border-radius: var(--figma-radius-full);
+            padding: var(--figma-space-2) var(--figma-space-4);
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--figma-purple-700);
+            margin-bottom: var(--figma-space-6);
+            box-shadow: var(--figma-shadow-sm);
+        }
+        
+        .figma-hero-badge::before {
+            content: '✨';
+            font-size: 16px;
+        }
+        
+        .figma-hero-title {
+            font-size: 56px;
+            font-weight: 800;
+            line-height: 1.1;
+            color: var(--figma-gray-900);
+            margin-bottom: var(--figma-space-6);
+            letter-spacing: -0.02em;
+        }
+        
+        .figma-hero-title .gradient-text {
+            background: linear-gradient(135deg, var(--figma-purple-600) 0%, var(--figma-blue-600) 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .figma-hero-subtitle {
+            font-size: 20px;
+            font-weight: 400;
+            color: var(--figma-gray-600);
+            margin-bottom: var(--figma-space-8);
+            line-height: 1.6;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        /* Figma Buttons */
+        .figma-button-group {
+            display: flex;
+            gap: var(--figma-space-4);
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: var(--figma-space-6);
+        }
+        
+        .figma-button {
+            font-weight: 500;
+            font-size: 14px;
+            padding: var(--figma-space-3) var(--figma-space-6);
+            border-radius: var(--figma-radius-md);
+            border: none;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: var(--figma-space-2);
+            cursor: pointer;
+            transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .figma-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+            transition: left 0.5s ease;
+        }
+        
+        .figma-button:hover::before {
+            left: 100%;
+        }
+        
+        .figma-button-primary {
+            background: linear-gradient(135deg, var(--figma-purple-600) 0%, var(--figma-blue-600) 100%);
+            color: white;
+            box-shadow: var(--figma-shadow-md);
+        }
+        
+        .figma-button-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--figma-shadow-xl);
+            color: white;
+        }
+        
+        .figma-button-secondary {
+            background: white;
+            color: var(--figma-gray-700);
+            border: 1px solid var(--figma-gray-300);
+            box-shadow: var(--figma-shadow-sm);
+        }
+        
+        .figma-button-secondary:hover {
+            background: var(--figma-gray-50);
+            border-color: var(--figma-purple-300);
+            color: var(--figma-purple-600);
+            transform: translateY(-1px);
+            box-shadow: var(--figma-shadow-md);
+        }
+        
+        .figma-stats {
+            display: flex;
+            justify-content: center;
+            gap: var(--figma-space-8);
+            margin-top: var(--figma-space-8);
+            font-size: 14px;
+            color: var(--figma-gray-500);
+        }
+        
+        .figma-stat {
+            display: flex;
+            align-items: center;
+            gap: var(--figma-space-2);
+        }
+        
+        /* Figma Sections */
+        .figma-section {
+            padding: var(--figma-space-20) 0;
+        }
+        
+        .figma-section-alt {
+            background: var(--figma-gray-50);
+        }
+        
+        .figma-section-title {
+            font-size: 36px;
+            font-weight: 700;
+            line-height: 1.2;
+            color: var(--figma-gray-900);
+            text-align: center;
+            margin-bottom: var(--figma-space-4);
+            letter-spacing: -0.01em;
+        }
+        
+        .figma-section-subtitle {
+            font-size: 18px;
+            font-weight: 400;
+            color: var(--figma-gray-600);
+            text-align: center;
+            margin-bottom: var(--figma-space-12);
+            line-height: 1.6;
+            max-width: 640px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        /* Figma Cards */
+        .figma-card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            gap: var(--figma-space-6);
+            margin-top: var(--figma-space-10);
+        }
+        
+        .figma-card {
+            background: white;
+            border: 1px solid var(--figma-gray-200);
+            border-radius: var(--figma-radius-lg);
+            padding: var(--figma-space-6);
+            position: relative;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            overflow: hidden;
+        }
+        
+        .figma-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--figma-purple-500) 0%, var(--figma-blue-500) 100%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        
+        .figma-card:hover {
+            border-color: var(--figma-purple-300);
+            box-shadow: var(--figma-shadow-xl);
+            transform: translateY(-4px);
+        }
+        
+        .figma-card:hover::before {
+            opacity: 1;
+        }
+        
+        .figma-feature {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+        
+        .figma-feature-icon {
+            width: 48px;
+            height: 48px;
+            background: linear-gradient(135deg, var(--figma-purple-500) 0%, var(--figma-blue-500) 100%);
+            border-radius: var(--figma-radius-md);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: var(--figma-space-4);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .figma-feature-icon::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg, transparent 30%, rgba(255, 255, 255, 0.3) 50%, transparent 70%);
+            transform: rotate(-45deg);
+            transition: transform 0.6s ease;
+        }
+        
+        .figma-card:hover .figma-feature-icon::after {
+            transform: rotate(-45deg) translate(100%, 100%);
+        }
+        
+        .figma-feature-content {
+            flex: 1;
+        }
+        
+        .figma-feature-content h3 {
+            font-size: 20px;
+            font-weight: 600;
+            color: var(--figma-gray-900);
+            margin-bottom: var(--figma-space-3);
+            line-height: 1.3;
+        }
+        
+        .figma-feature-content p {
+            font-size: 15px;
+            color: var(--figma-gray-600);
+            line-height: 1.6;
+            margin: 0;
+        }
+        
+        /* Figma Alert/Callout */
+        .figma-callout {
+            background: linear-gradient(135deg, #FEF3C7 0%, #FDE68A 100%);
+            border: 1px solid #F59E0B;
+            border-radius: var(--figma-radius-lg);
+            padding: var(--figma-space-6);
+            margin: var(--figma-space-10) 0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .figma-callout::before {
+            content: '⚡';
+            position: absolute;
+            top: var(--figma-space-4);
+            left: var(--figma-space-4);
+            font-size: 20px;
+        }
+        
+        .figma-callout-content {
+            padding-left: var(--figma-space-8);
+        }
+        
+        .figma-callout-title {
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--figma-gray-900);
+            margin-bottom: var(--figma-space-2);
+        }
+        
+        .figma-callout-text {
+            font-size: 15px;
+            color: var(--figma-gray-700);
+            line-height: 1.6;
+            text-align: center;
+        }
+        
+        /* Figma Footer */
+        .figma-footer {
+            background: var(--figma-gray-900);
+            color: var(--figma-gray-300);
+            padding: var(--figma-space-16) 0 var(--figma-space-8);
+        }
+        
+        .figma-footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: var(--figma-space-8);
+            margin-bottom: var(--figma-space-8);
+        }
+        
+        .figma-footer h4 {
+            font-weight: 600;
+            color: white;
+            margin-bottom: var(--figma-space-4);
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        
+        .figma-footer ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .figma-footer li {
+            margin-bottom: var(--figma-space-2);
+        }
+        
+        .figma-footer a {
+            color: var(--figma-gray-400);
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.2s ease;
+        }
+        
+        .figma-footer a:hover {
+            color: var(--figma-purple-400);
+        }
+        
+        .figma-footer-bottom {
+            border-top: 1px solid var(--figma-gray-700);
+            padding-top: var(--figma-space-6);
+            text-align: center;
+        }
+        
+        .figma-footer-bottom p {
+            font-size: 12px;
+            color: var(--figma-gray-500);
+            margin: 0;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .figma-hero-title {
+                font-size: 36px;
+            }
+            
+            .figma-hero-subtitle {
+                font-size: 16px;
+            }
+            
+            .figma-section-title {
+                font-size: 28px;
+            }
+            
+            .figma-button-group {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .figma-stats {
+                flex-direction: column;
+                gap: var(--figma-space-4);
+            }
+            
+            .figma-card-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="pattern-indicator">Pattern 4: Figma UI2</div>
+    
+    <header class="site-header figma-nav">
+        <nav class="navbar">
+            <div class="container">
+                <div class="navbar-brand">
+                    <a href="#" class="site-title">
+                        AI Overview Studio
+                    </a>
+                </div>
+                
+                <div class="navbar-menu">
+                    <ul class="nav-menu">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#pricing">Pricing</a></li>
+                        <li><a href="#demo">Demo</a></li>
+                    </ul>
+                </div>
+                
+                <button class="navbar-toggle" id="navbar-toggle" aria-label="メニューを開く">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+    
+    <main id="main" class="site-main">
+
+        <!-- Hero Section - Figma Style -->
+        <section class="figma-hero" id="home">
+            <div class="container">
+                <div class="figma-hero-content">
+                    <div class="figma-hero-badge">
+                        New: AI Overview Analytics Dashboard
+                    </div>
+                    
+                    <h1 class="figma-hero-title">
+                        Design your way to<br>
+                        <span class="gradient-text">AI search success</span>
+                    </h1>
+                    
+                    <p class="figma-hero-subtitle">
+                        Create, optimize, and scale your content for Google's AI Overview with our comprehensive WordPress plugin designed for modern digital creators.
+                    </p>
+                    
+                    <div class="figma-button-group">
+                        <a href="#demo" class="figma-button figma-button-primary">
+                            <span>Start free trial</span>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M13 7l5 5-5 5M6 12h12"/>
+                            </svg>
+                        </a>
+                        <a href="#features" class="figma-button figma-button-secondary">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M15 10l4.5-4.5M10.5 14l4.5-4.5m0 0l-3.5-3.5m3.5 3.5L19 5.5"/>
+                            </svg>
+                            <span>View features</span>
+                        </a>
+                    </div>
+                    
+                    <div class="figma-stats">
+                        <div class="figma-stat">
+                            <span>⚡</span>
+                            <span>98% faster optimization</span>
+                        </div>
+                        <div class="figma-stat">
+                            <span>📊</span>
+                            <span>Real-time analytics</span>
+                        </div>
+                        <div class="figma-stat">
+                            <span>🚀</span>
+                            <span>Auto-scaling content</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Problem Section -->
+        <section class="figma-section">
+            <div class="container-narrow">
+                <h2 class="figma-section-title">The search landscape has changed</h2>
+                <p class="figma-section-subtitle">
+                    Traditional SEO strategies are no longer sufficient. Google's AI Overview now dominates search results, 
+                    requiring a completely new approach to content optimization and discovery.
+                </p>
+                
+                <div class="figma-callout">
+                    <div class="figma-callout-content">
+                        <h3 class="figma-callout-title">Critical shift happening now</h3>
+                        <p class="figma-callout-text">
+                            Even top-ranking pages lose significant traffic if they're not featured in AI Overview. 
+                            The future belongs to AI-optimized content strategies.
+                        </p>
+                    </div>
+                </div>
+                
+                <p class="figma-section-subtitle">
+                    Stay ahead of the curve with tools designed specifically for the AI-first search era.
+                </p>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="figma-section figma-section-alt" id="features">
+            <div class="container">
+                <h2 class="figma-section-title">Built for creators, by creators</h2>
+                <p class="figma-section-subtitle">
+                    Every feature is designed with the modern content creator in mind, providing powerful tools 
+                    that feel intuitive and integrate seamlessly into your existing workflow.
+                </p>
+                
+                <div class="figma-card-grid">
+                    <div class="figma-card">
+                        <div class="figma-feature">
+                            <div class="figma-feature-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="white">
+                                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                                </svg>
+                            </div>
+                            <div class="figma-feature-content">
+                                <h3>Smart Content Analysis</h3>
+                                <p>AI-powered content scanning that identifies optimization opportunities in real-time. Get actionable insights that actually improve your AI Overview visibility.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="figma-card">
+                        <div class="figma-feature">
+                            <div class="figma-feature-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="white">
+                                    <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z"/>
+                                </svg>
+                            </div>
+                            <div class="figma-feature-content">
+                                <h3>Beautiful Analytics</h3>
+                                <p>Track your AI Overview performance with stunning, easy-to-understand dashboards. Monitor trends, measure impact, and make data-driven decisions.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="figma-card">
+                        <div class="figma-feature">
+                            <div class="figma-feature-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="white">
+                                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                                </svg>
+                            </div>
+                            <div class="figma-feature-content">
+                                <h3>Automated Optimization</h3>
+                                <p>Let our AI handle the technical optimization while you focus on creating great content. Automatic suggestions and one-click improvements.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="figma-section" id="demo">
+            <div class="container-narrow">
+                <h2 class="figma-section-title">Ready to optimize for AI?</h2>
+                <p class="figma-section-subtitle">
+                    Start your free 14-day trial today. No credit card required, cancel anytime. 
+                    Join thousands of creators who've already made the switch to AI-optimized content.
+                </p>
+                <div style="text-align: center; margin-top: var(--figma-space-8);">
+                    <a href="#demo" class="figma-button figma-button-primary" style="font-size: 16px; padding: var(--figma-space-4) var(--figma-space-8);">
+                        <span>Start your free trial</span>
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M13 7l5 5-5 5M6 12h12"/>
+                        </svg>
+                    </a>
+                    <p style="margin-top: var(--figma-space-4); font-size: 14px; color: var(--figma-gray-500);">
+                        ✨ Free trial includes full access to all pro features
+                    </p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+    
+    <footer class="figma-footer">
+        <div class="container">
+            <div class="figma-footer-grid">
+                <div class="footer-widget-area">
+                    <h4>Product</h4>
+                    <ul>
+                        <li><a href="#">Features</a></li>
+                        <li><a href="#">Pricing</a></li>
+                        <li><a href="#">Integrations</a></li>
+                        <li><a href="#">API</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-widget-area">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="#">Documentation</a></li>
+                        <li><a href="#">Tutorials</a></li>
+                        <li><a href="#">Case Studies</a></li>
+                        <li><a href="#">Blog</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-widget-area">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Community</a></li>
+                        <li><a href="#">Status</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-widget-area">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Privacy</a></li>
+                        <li><a href="#">Terms</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="figma-footer-bottom">
+            <div class="container">
+                <p>&copy; 2025 AI Overview Studio. Designed with Figma UI2 inspiration.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/smooth-scroll.js"></script>
+</body>
+</html>
