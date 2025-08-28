@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Pattern 2: Apple HIG Inspired - AI Overview LP Theme</title>
+    <meta name="description" content="Pattern 2: Apple HIG風デザイン - AI検索対策プラグインのランディングページ">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="assets/css/custom.css">
+    <style>
+        /* Apple HIG inspired design system */
+        :root {
+            --apple-blue: #007AFF;
+            --apple-blue-dark: #0056D0;
+            --apple-gray-1: #8E8E93;
+            --apple-gray-2: #AEAEB2;
+            --apple-gray-3: #C7C7CC;
+            --apple-gray-4: #D1D1D6;
+            --apple-gray-5: #E5E5EA;
+            --apple-gray-6: #F2F2F7;
+            --apple-green: #34C759;
+            --apple-orange: #FF9500;
+            --apple-red: #FF3B30;
+            --apple-purple: #AF52DE;
+            
+            --apple-font-large-title: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Helvetica Neue', sans-serif;
+            --apple-font-body: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', sans-serif;
+        }
+        
+        .pattern-indicator {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            background: var(--apple-blue);
+            color: white;
+            padding: 8px 12px;
+            border-radius: 8px;
+            font-size: 12px;
+            font-weight: 500;
+            z-index: 9999;
+            font-family: var(--apple-font-body);
+        }
+        
+        /* Apple-style navigation */
+        .apple-nav {
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            background: rgba(255, 255, 255, 0.8);
+            border-bottom: 0.5px solid var(--apple-gray-4);
+        }
+        
+        .apple-nav .site-title {
+            font-family: var(--apple-font-large-title);
+            font-weight: 600;
+            font-size: 22px;
+            color: #000;
+        }
+        
+        .apple-nav .nav-menu a {
+            font-family: var(--apple-font-body);
+            font-weight: 400;
+            color: var(--apple-blue);
+            font-size: 17px;
+            text-decoration: none;
+            transition: opacity 0.2s ease;
+        }
+        
+        .apple-nav .nav-menu a:hover {
+            opacity: 0.6;
+        }
+        
+        /* Apple-style hero section */
+        .apple-hero {
+            background: linear-gradient(135deg, var(--apple-gray-6) 0%, white 100%);
+            text-align: center;
+            padding: 100px 0 80px;
+        }
+        
+        .apple-hero-title {
+            font-family: var(--apple-font-large-title);
+            font-size: 48px;
+            font-weight: 600;
+            line-height: 1.08;
+            letter-spacing: -0.02em;
+            color: #1d1d1f;
+            margin-bottom: 20px;
+        }
+        
+        .apple-hero-subtitle {
+            font-family: var(--apple-font-body);
+            font-size: 24px;
+            font-weight: 400;
+            color: var(--apple-gray-1);
+            margin-bottom: 40px;
+            line-height: 1.33;
+        }
+        
+        .apple-button {
+            background: var(--apple-blue);
+            color: white;
+            border: none;
+            border-radius: 22px;
+            padding: 12px 32px;
+            font-family: var(--apple-font-body);
+            font-size: 17px;
+            font-weight: 400;
+            text-decoration: none;
+            display: inline-block;
+            transition: background-color 0.2s ease;
+            margin: 8px;
+        }
+        
+        .apple-button:hover {
+            background: var(--apple-blue-dark);
+            color: white;
+        }
+        
+        .apple-button-secondary {
+            background: transparent;
+            color: var(--apple-blue);
+            border: 1px solid var(--apple-blue);
+        }
+        
+        .apple-button-secondary:hover {
+            background: var(--apple-blue);
+            color: white;
+        }
+        
+        /* Apple-style sections */
+        .apple-section {
+            padding: 80px 0;
+            background: white;
+        }
+        
+        .apple-section-gray {
+            background: var(--apple-gray-6);
+        }
+        
+        .apple-section-title {
+            font-family: var(--apple-font-large-title);
+            font-size: 40px;
+            font-weight: 600;
+            line-height: 1.1;
+            letter-spacing: -0.02em;
+            text-align: center;
+            color: #1d1d1f;
+            margin-bottom: 60px;
+        }
+        
+        .apple-card {
+            background: white;
+            border-radius: 18px;
+            padding: 32px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            border: 0.5px solid var(--apple-gray-4);
+            margin-bottom: 24px;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        
+        .apple-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
+        }
+        
+        .apple-feature {
+            display: flex;
+            align-items: center;
+            margin-bottom: 32px;
+        }
+        
+        .apple-feature-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--apple-blue) 0%, var(--apple-purple) 100%);
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 24px;
+            flex-shrink: 0;
+        }
+        
+        .apple-feature-content h3 {
+            font-family: var(--apple-font-large-title);
+            font-size: 24px;
+            font-weight: 600;
+            color: #1d1d1f;
+            margin-bottom: 8px;
+        }
+        
+        .apple-feature-content p {
+            font-family: var(--apple-font-body);
+            font-size: 17px;
+            color: var(--apple-gray-1);
+            line-height: 1.47;
+        }
+        
+        .apple-text-body {
+            font-family: var(--apple-font-body);
+            font-size: 19px;
+            line-height: 1.47;
+            color: var(--apple-gray-1);
+            text-align: center;
+            margin-bottom: 32px;
+        }
+        
+        .apple-highlight {
+            background: linear-gradient(135deg, #FFE5B4 0%, #FFCB77 100%);
+            border-radius: 16px;
+            padding: 32px;
+            margin: 40px 0;
+            border-left: 4px solid var(--apple-orange);
+        }
+        
+        .apple-highlight-text {
+            font-family: var(--apple-font-large-title);
+            font-size: 22px;
+            font-weight: 600;
+            color: #1d1d1f;
+            text-align: center;
+        }
+        
+        /* Apple-style grid */
+        .apple-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 24px;
+            margin-top: 40px;
+        }
+        
+        /* Apple-style footer */
+        .apple-footer {
+            background: #1d1d1f;
+            color: var(--apple-gray-2);
+            padding: 40px 0 20px;
+        }
+        
+        .apple-footer h4 {
+            color: white;
+            font-family: var(--apple-font-body);
+            font-weight: 600;
+            margin-bottom: 16px;
+        }
+        
+        .apple-footer a {
+            color: var(--apple-gray-2);
+            font-family: var(--apple-font-body);
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+        
+        .apple-footer a:hover {
+            color: white;
+        }
+        
+        .apple-footer-bottom {
+            border-top: 0.5px solid var(--apple-gray-1);
+            padding-top: 20px;
+            margin-top: 20px;
+            text-align: center;
+        }
+        
+        .apple-footer-bottom p {
+            font-size: 12px;
+            color: var(--apple-gray-1);
+            font-family: var(--apple-font-body);
+        }
+        
+        @media (max-width: 768px) {
+            .apple-hero-title {
+                font-size: 32px;
+            }
+            
+            .apple-hero-subtitle {
+                font-size: 19px;
+            }
+            
+            .apple-section-title {
+                font-size: 28px;
+            }
+            
+            .apple-feature {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .apple-feature-icon {
+                margin-right: 0;
+                margin-bottom: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="pattern-indicator">Pattern 2: Apple HIG</div>
+    
+    <header class="site-header apple-nav">
+        <nav class="navbar">
+            <div class="container">
+                <div class="navbar-brand">
+                    <a href="#" class="site-title">
+                        AI Overview
+                    </a>
+                </div>
+                
+                <div class="navbar-menu">
+                    <ul class="nav-menu">
+                        <li><a href="#home">ホーム</a></li>
+                        <li><a href="#features">機能</a></li>
+                        <li><a href="#benefits">ベネフィット</a></li>
+                        <li><a href="#demo">デモ</a></li>
+                    </ul>
+                </div>
+                
+                <button class="navbar-toggle" id="navbar-toggle" aria-label="メニューを開く">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+    
+    <main id="main" class="site-main">
+
+        <!-- Hero Section - Apple Style -->
+        <section class="apple-hero" id="home">
+            <div class="container">
+                <h1 class="apple-hero-title">AIの時代の検索戦略。</h1>
+                <p class="apple-hero-subtitle">SEOからAIOへ。あなたのコンテンツを新しい検索体験に最適化。</p>
+                <div class="hero-actions">
+                    <a href="#demo" class="apple-button">無料で始める</a>
+                    <a href="#features" class="apple-button apple-button-secondary">機能を見る</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Problem Section -->
+        <section class="apple-section" id="problem">
+            <div class="container-narrow">
+                <h2 class="apple-section-title">検索の未来は、もう始まっている。</h2>
+                <p class="apple-text-body">従来のSEOでは上位表示が目標でした。しかし現在、多くのユーザーはGoogleのAIサマリから直接情報を得ています。</p>
+                
+                <div class="apple-highlight">
+                    <p class="apple-highlight-text">上位表示されても、AIサマリに載らなければ、見られない時代になりました。</p>
+                </div>
+                
+                <p class="apple-text-body">この変化に対応できるかどうかが、今後のWebマーケティングの成否を分けます。</p>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="apple-section apple-section-gray" id="features">
+            <div class="container">
+                <h2 class="apple-section-title">AIファーストの最適化ツール</h2>
+                <p class="apple-text-body">GoogleのAI検索に最適化された、次世代のWordPressプラグイン。</p>
+                
+                <div class="apple-grid">
+                    <div class="apple-card">
+                        <div class="apple-feature">
+                            <div class="apple-feature-icon">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="white">
+                                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                                </svg>
+                            </div>
+                            <div class="apple-feature-content">
+                                <h3>インテリジェント分析</h3>
+                                <p>記事がAIに最適化されているかをリアルタイムで自動分析。</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="apple-card">
+                        <div class="apple-feature">
+                            <div class="apple-feature-icon">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="white">
+                                    <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z"/>
+                                </svg>
+                            </div>
+                            <div class="apple-feature-content">
+                                <h3>詳細なインサイト</h3>
+                                <p>AIサマリでの表示率と改善ポイントを可視化。</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="apple-card">
+                        <div class="apple-feature">
+                            <div class="apple-feature-icon">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="white">
+                                    <path d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0l4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4z"/>
+                                </svg>
+                            </div>
+                            <div class="apple-feature-content">
+                                <h3>AIに最適化された提案</h3>
+                                <p>改善提案を受けて、即座にコンテンツを最適化。</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="apple-section" id="demo">
+            <div class="container-narrow">
+                <h2 class="apple-section-title">今すぐ体験してください。</h2>
+                <p class="apple-text-body">無料デモで、あなたのサイトがAI検索でどのように評価されているかを確認できます。</p>
+                <div style="text-align: center; margin-top: 40px;">
+                    <a href="#demo" class="apple-button">無料デモを試す</a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+    
+    <footer class="apple-footer">
+        <div class="container">
+            <div class="footer-widgets-grid">
+                <div class="footer-widget-area">
+                    <h4>製品</h4>
+                    <ul>
+                        <li><a href="#">プラグイン</a></li>
+                        <li><a href="#">料金</a></li>
+                        <li><a href="#">サポート</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-widget-area">
+                    <h4>リソース</h4>
+                    <ul>
+                        <li><a href="#">ガイド</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">お問い合わせ</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-widget-area">
+                    <h4>企業情報</h4>
+                    <ul>
+                        <li><a href="#">会社概要</a></li>
+                        <li><a href="#">プライバシー</a></li>
+                        <li><a href="#">利用規約</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="apple-footer-bottom">
+            <div class="container">
+                <p>&copy; 2025 AI Overview LP Theme. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/smooth-scroll.js"></script>
+</body>
+</html>
