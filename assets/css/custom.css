@@ -704,9 +704,54 @@
 }
 
 /* Responsive Design */
+/* Tablet Portrait and Mobile Landscape */
+@media (max-width: 992px) {
+    .container {
+        padding: 0 var(--spacing-lg);
+    }
+    
+    .container-narrow {
+        padding: 0 var(--spacing-lg);
+    }
+    
+    .grid-3 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Tablet and Mobile */
 @media (max-width: 768px) {
     .navbar-menu {
         display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: #ffffff;
+        box-shadow: var(--shadow-lg);
+        border-top: 1px solid var(--spectrum-gray-200);
+        padding: var(--spacing-lg) 0;
+    }
+    
+    .navbar-menu .nav-menu {
+        flex-direction: column;
+        gap: 0;
+        padding: 0 var(--spacing-lg);
+    }
+    
+    .navbar-menu .nav-menu li {
+        border-bottom: 1px solid var(--spectrum-gray-100);
+    }
+    
+    .navbar-menu .nav-menu li:last-child {
+        border-bottom: none;
+    }
+    
+    .navbar-menu .nav-menu a {
+        display: block;
+        padding: var(--spacing-md) 0;
+        color: var(--spectrum-gray-800);
+        font-size: 16px;
     }
     
     .navbar-toggle {
@@ -724,6 +769,7 @@
     .footer-bottom-content {
         flex-direction: column;
         gap: var(--spacing-lg);
+        text-align: center;
     }
     
     .column-navigation {
@@ -737,20 +783,177 @@
     
     .category-list {
         padding-bottom: var(--spacing-sm);
+        justify-content: flex-start;
+    }
+    
+    /* Reduce section padding on mobile */
+    section {
+        padding: var(--spacing-3xl) 0;
+    }
+    
+    .section-hero {
+        padding: var(--spacing-4xl) 0;
+    }
+    
+    /* Better spacing for mobile */
+    .feature-item {
+        flex-direction: column;
+        text-align: center;
+        padding: var(--spacing-xl);
+    }
+    
+    .feature-icon {
+        margin: 0 auto var(--spacing-md);
+    }
+    
+    /* Better testimonials layout */
+    .testimonial-card {
+        padding: var(--spacing-xl);
+    }
+    
+    /* Footer improvements */
+    .footer-widgets-grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-xl);
+        text-align: center;
+    }
+    
+    .footer-nav {
+        flex-direction: column;
+        gap: var(--spacing-md);
     }
 }
 
+/* Mobile Portrait */
 @media (max-width: 480px) {
+    .container {
+        padding: 0 var(--spacing-md);
+    }
+    
+    .container-narrow {
+        padding: 0 var(--spacing-md);
+    }
+    
     .section-title {
         font-size: 28px;
+        margin-bottom: var(--spacing-xl);
     }
     
     .hero-title {
         font-size: 32px;
+        line-height: 1.3;
+    }
+    
+    .hero-subtitle {
+        font-size: 16px;
     }
     
     .single-column .column-title {
         font-size: 28px;
+    }
+    
+    /* Reduce section padding further */
+    section {
+        padding: var(--spacing-2xl) 0;
+    }
+    
+    .section-hero {
+        padding: var(--spacing-3xl) 0;
+    }
+    
+    /* Button adjustments */
+    .btn-large {
+        padding: 16px 24px;
+        font-size: 16px;
+    }
+    
+    /* Card adjustments */
+    .card {
+        padding: var(--spacing-lg);
+    }
+    
+    .feature-item {
+        padding: var(--spacing-lg);
+        margin-bottom: var(--spacing-lg);
+    }
+    
+    .testimonial-card {
+        padding: var(--spacing-lg);
+    }
+    
+    .benefit-card {
+        padding: var(--spacing-lg);
+    }
+    
+    /* Steps adjustments */
+    .step-item {
+        padding-left: 50px;
+        margin-bottom: var(--spacing-xl);
+    }
+    
+    .step-item::before {
+        width: 32px;
+        height: 32px;
+        font-size: 14px;
+    }
+    
+    /* FAQ adjustments */
+    .faq-question {
+        font-size: 16px;
+        padding-right: var(--spacing-lg);
+    }
+    
+    /* CTA section adjustments */
+    .cta-section {
+        padding: var(--spacing-2xl) var(--spacing-md);
+        margin: var(--spacing-2xl) var(--spacing-md);
+    }
+    
+    /* Navigation brand */
+    .navbar-brand .site-title {
+        font-size: 20px;
+    }
+    
+    /* Back to top button adjustment */
+    .back-to-top {
+        bottom: 20px;
+        right: 20px;
+        width: 40px;
+        height: 40px;
+        font-size: 16px;
+    }
+}
+
+/* Very small screens */
+@media (max-width: 360px) {
+    .container {
+        padding: 0 var(--spacing-sm);
+    }
+    
+    .container-narrow {
+        padding: 0 var(--spacing-sm);
+    }
+    
+    .hero-title {
+        font-size: 28px;
+    }
+    
+    .section-title {
+        font-size: 24px;
+    }
+    
+    .btn {
+        font-size: 14px;
+        padding: 12px 20px;
+    }
+    
+    .btn-large {
+        font-size: 15px;
+        padding: 14px 20px;
+    }
+    
+    .navbar-brand .site-title {
+        font-size: 18px;
     }
 }
 
